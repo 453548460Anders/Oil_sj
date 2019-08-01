@@ -1,0 +1,76 @@
+<template>
+  <div class="page" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left" style="width: 66px">
+          <a href="#" class="link back">
+            <i class="icon icon-back color-blue"></i>
+          </a>
+        </div>
+        <div class="title">查看地理位置</div>
+        <div class="right" style="width: 66px"></div>
+      </div>
+    </div>
+    <div class="page-content" style="padding-bottom:0;">
+      <div id="container" style="height:100%;width:100%;">
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        var me = this;
+        mui.back = function () {
+          me.$router.back();
+        };
+        me.$('.back').on('click', function (event) {
+          event.stopPropagation();
+          event.preventDefault();
+          me.$router.back();
+        });
+        var initMap = function (lng, lat) {
+          console.log('地图页面: ' + lat + ',' + lng);
+          map = new AMap.Map("container", {
+            center: [lat, lng],
+            resizeEnable: true,
+            zoom: 12
+          });
+          marker = new AMap.Marker({
+            position: [lat, lng],
+            title: me.name,
+            map: map
+          });
+          marker.setLabel({
+            offset: new AMap.Pixel(20, 20),
+            content: me.name
+          });
+        }
+        initMap(me.lat, me.lng);
+        me.$$('.toolbar').addClass('hidden');
+      }
+    },
+    beforeDestroy: function () {
+      var me = this;
+      mui.back = function () {
+        me.$router.back();
+        setTimeout(function () {
+          $$(document).trigger('meReady');
+          $$(document).trigger('serviceReady');
+
+          $$('#service-user-name')[0] ? $$('#service-user-name')[0].innerHTML = window.name : '';
+          $$('#service-user-telphone')[0] ? $$('#service-user-telphone')[0].innerHTML = window.telphone : '';
+
+          $$('#me-chepaihao-id')[0] ? $$('#me-chepaihao-id')[0].innerHTML = window.plate : '';
+          $$('#me-guahao-id')[0] ? $$('#me-guahao-id')[0].innerHTML = window.guahao : '';
+          $$('#me-name-id')[0] ? $$('#me-name-id')[0].innerHTML = window.name : '';
+          $$('#me-idcard-id')[0] ? $$('#me-idcard-id')[0].innerHTML = window.idcard : '';
+          $$('#me-telphone-id')[0] ? $$('#me-telphone-id')[0].innerHTML = window.telphone : '';
+          $$('#me-weight-id')[0] ? $$('#me-weight-id')[0].innerHTML = window.weight : '';
+          $$('#me-chedui-id')[0] ? $$('#me-chedui-id')[0].innerHTML = window.sscd : '';
+        }, 500);
+      }
+    },
+  }
+</script>

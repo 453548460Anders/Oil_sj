@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"  tools:ignore="MissingTranslation">
+
+    <string name="app_name">东北中油</string>
+    <string name="meglive_title">人脸活体检测</string>
+    <string name="idcard_title">身份证信息检测</string>
+    <string name="meglive_version">版本号：</string>
+    <string name="meglive_livenessBtn">活体检测</string>
+    <string name="meglive_auth_progress">正在联网授权中...</string>
+    <string name="meglive_auth_again">重新联网授权</string>
+    <string name="meglive_auth_failed">联网授权失败！请检查网络或找服务商</string>
+    <string name="meglive_returnbtn">返回首页</string>
+    <string name="meglive_liveness_again">重新验证活体</string>
+    <string name="action_settings">Settings</string>
+    <string name="jump">跳过</string>
+    <string name="nojump">请完成活体校验流程，进行信息验证</string>
+    <string name="updateapkfailed">apk下载失败，请稍后重试</string>
+    <string name="updateexist">检测到新版本，是否更新？</string>
+    <string name="updatesure">确定</string>
+    <string name="updatecancle">取消</string>
+    <string name="updatetitle">更新提醒</string>
+
+</resources>

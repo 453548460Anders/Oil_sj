@@ -1,0 +1,53 @@
+<template>
+  <div class="page search-location" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back color-blue"></i>
+          </a>
+        </div>
+        <div class="title">兑换记录</div>
+        <div class="right" style="width: 66px"></div>
+      </div>
+    </div>
+    <div id="recordsId" class="page-content">
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        var me = this;
+        me.$app.request.post(window.url + 'type=getproductduihuanlist',
+          { gid: window.userid, pagecurr: 1, pagenum: 100 },
+          function (data) {
+            console.error('兑换记录', JSON.parse(data));
+            const htmlText = '{{#each list}}<div style="display: flex; flex-direction: row; width: 100%; border-bottom: 1px solid #EBECED; height: 60px; background: #fff;padding: 10px;">' +
+              '<div style="width: 70%;">' +
+              '<div style="height: 30px;line-height: 30px;color: #0D1216;">{{name}}</div>' +
+              '<div style="height: 30px;line-height: 30px;color: #D3D3D4;">' +
+              ' <i class="iconfont icon-clock" style="margin-right: 5px;"></i>{{time}}</div>' +
+              '</div>' +
+              '<div style="height: 60px;line-height: 60px;font-size: 32px;color: #C85555;">-{{syjf}}</div>' +
+              '</div>{{/each}}';
+            var compiledTemplate = Template7.compile(htmlText);
+            const result = JSON.parse(data);
+            if (result && result.info && result.info.length > 0) {
+              var html = compiledTemplate({
+                list: result.info
+              });
+              me.$$('#recordsId').html(html);
+            } else {
+              me.$$('#recordsId').html('<span class="no-data">没有兑换记录</span>');
+            }
+
+          });
+      }
+    },
+    beforeDestroy: function () {
+      this.$$('.toolbar').removeClass('hidden');
+    },
+  };
+</script>

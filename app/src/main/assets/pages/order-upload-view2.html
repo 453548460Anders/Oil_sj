@@ -1,0 +1,220 @@
+<template>
+  <div class="page" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back color-blue"></i>
+          </a>
+        </div>
+        <div class="title">铅封查看</div>
+        <div class="right" style="width: 66px"></div>
+      </div>
+    </div>
+    <div class="page-content hide-navbar-on-scroll" style="padding-bottom: 0!important">
+      <div class="list inline-labels no-hairlines-md">
+        <ul>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">车牌号</div>
+              <div class="item-input-wrap">
+                <input id="plate-id" type="text" placeholder="请输入">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">日期</div>
+              <div class="item-input-wrap">
+                <input id="date-id" type="text" placeholder="请选择日期" onfocus="(this.type='date')" onblur="(this.type='text')">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">货物名称</div>
+              <div class="item-input-wrap">
+                <input id="proname-id" type="text" placeholder="请输入">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">装货地</div>
+              <div class="item-input-wrap">
+                <input id="zhd-id" type="text" placeholder="请输入">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">卸货地</div>
+              <div class="item-input-wrap">
+                <input id="xhd-id" type="text" placeholder="请输入">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">司机</div>
+              <div class="item-input-wrap">
+                <input id="drivername-id" type="text" placeholder="请输入">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">装车吨数</div>
+              <div class="item-input-wrap">
+                <input id="zcds-id" type="number" placeholder="请输入">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">卸车吨数</div>
+              <div class="item-input-wrap">
+                <input id="xcds-id" type="number" placeholder="请输入">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">运输公司</div>
+              <div class="item-input-wrap">
+                <input id="ysgs-id" type="text" placeholder="请输入">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div style="height: 52px;line-height: 52px;background: #F7F8F9;padding-left: 10px;">铅封信息</div>
+        <div id="order-entity"></div>
+      </div>
+      <div class="order-upload-btn-container">
+        <button id="order-upload-submit-id" class="col button button-fill">添加铅封</button>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        var me = this;
+        console.error('上传磅单', this);
+        mui.back = function () {
+          me.$router.back();
+          setTimeout(function () {
+            $$(document).trigger('hallReady');
+            $$(document).trigger('orderReady');
+          }, 500);
+        }
+        me.$('.back').on('click', function (event) {
+          event.stopPropagation();
+          event.preventDefault();
+          $$(document).trigger('orderReady');
+          me.$router.navigate('/order/');
+        });
+        me.$$('.toolbar').addClass('hidden');
+
+        // 获取已上传的磅单
+        app.request.post(window.url + 'type=getqfshow', {
+          id: me.id
+        },
+          function (data) {
+            console.error('司机铅封详情', JSON.parse(data));
+            var result = JSON.parse(data);
+            me.$('#plate-id')[0].value = result.plate;
+            me.$('#date-id')[0].value = result.createtime;
+            me.$('#proname-id')[0].value = result.proname;
+            me.$('#zhd-id')[0].value = result.zhd;
+            me.$('#xhd-id')[0].value = result.xhd;
+            me.$('#drivername-id')[0].value = result.drivername;
+            me.$('#zcds-id')[0].value = result.zcds;
+            me.$('#xcds-id')[0].value = result.xcds;
+            me.$('#ysgs-id')[0].value = result.ysgs;
+
+            var carlist = result.carlist;
+            if (carlist && carlist.length > 0) {
+              const htmlText = '<div class="list">' +
+                ' <ul>' +
+                '{{#each list}} <li>' +
+                ' <div class="item-content">' +
+                '<div class="item-inner">' +
+                ' <div class="item-title">{{number}}</div>' +
+                '<div class="item-after" style="line-height: 24px;"><span class="bianji" data-set={{@index}}><i class="iconfont icon-bianji" style="color: #558FF2" data-set={{@index}}></i>&nbsp;编辑&nbsp;&nbsp;</span><span class="yulan" data-set={{@index}}><i class="iconfont icon-fangdajing" style="color: #558FF2" data-set={{@index}}></i>&nbsp;预览&nbsp;&nbsp;</span><span class="shanchu" data-set={{@index}}><i class="iconfont icon-shanchu" style="color: #558FF2" data-set={{@index}}></i>&nbsp;删除</span></div>' +
+                '</div>' +
+                '</div>' +
+                '</li>' +
+                '{{/each}} <ul>' +
+                '</div>';
+              // compile it with Template7
+              var compiledTemplate = Template7.compile(htmlText);
+              var html = compiledTemplate({
+                list: carlist
+              });
+              me.$('#order-entity').html(html);
+              me.$('.yulan').on('click', function () {
+                const index = event.target.dataset.set;
+                console.error('预览', index);
+                me.$router.navigate('/order-entity-view/', {
+                  context: Object.assign(carlist[index], { type: 'view1' })
+                });
+              });
+
+              me.$('.bianji').on('click', function () {
+                const index = event.target.dataset.set;
+                me.$router.navigate('/order-entity-edit/', {
+                  context: Object.assign(carlist[index], { type: 'edit' })
+                });
+              });
+
+              me.$('.shanchu').on('click', function () {
+                const index = event.target.dataset.set;
+                console.error('删除', index);
+                me.$app.dialog.confirm('确定要删除' + carlist[index].number + '?', '注意', function () {
+                  me.$app.preloader.show();
+                  app.request.post(window.url + 'type=delqf', {
+                    id: carlist[index].id
+                  },
+                    function (data) {
+                      me.$app.preloader.hide();
+                      var result = JSON.parse(data);
+                      console.error('删除铅封', result);
+                      if (result.errcode === '00000') {
+                        var toastTop = app.toast.create({
+                          text: '删除成功!',
+                          position: 'center',
+                          closeTimeout: 2000,
+                        });
+                        toastTop.open();
+                        setTimeout(function () {
+                          getInfo();
+                        });
+                      }
+                    });
+                });
+              });
+
+              me.$('#order-upload-submit-id').on('click', function () {
+                me.$router.navigate('/order-entity-new/', {
+                  context: { tid: me.id, type: 'new', carid: me.carid }
+                });
+              });
+            }
+          });
+      }
+    },
+  };
+</script>

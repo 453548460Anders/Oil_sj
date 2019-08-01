@@ -1,0 +1,40 @@
+<template>
+  <div class="page" data-name="about">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back color-blue"></i>
+          </a>
+        </div>
+        <div class="title">用户协议</div>
+        <div class="right" style="width: 66px"></div>
+      </div>
+    </div>
+    <div class="page-content suggest" id="aboutUs" style="padding: 66px 10px 10px 10px;">
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        console.log('componentMounted', this);
+        var me = this;
+        app.preloader.show();
+        app.request.post(window.url + 'type=getnews', {
+          newstype: 4,
+        }, function (data) {
+          console.log('用户协议', data);
+          app.preloader.hide();
+          var result = JSON.parse(data);
+          if (result.result) {
+            me.$('#aboutUs')[0].innerHTML = result.result;
+          } else {
+            me.$('#aboutUs')[0].innerHTML = '<div style="width: 100%;text-align: center; padding: 20px;color: #333;font-size: 16px;">无相关内容</div>';
+          }
+        });
+      }
+    },
+  };
+</script>

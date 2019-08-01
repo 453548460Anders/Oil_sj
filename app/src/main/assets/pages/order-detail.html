@@ -1,0 +1,279 @@
+<template>
+  <div class="page" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back color-blue"></i>
+          </a>
+        </div>
+        <div class="title">订单详情</div>
+        <div class="right">
+          <a href="#" class="link share">
+            <i class="iconfont icon-fenxiang"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="order-detail" class="page-content">
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        console.error('订单详情------', this);
+        var me = this;
+        mui.back = function () {
+          me.$router.back();
+          setTimeout(function () {
+            $$(document).trigger('hallReady');
+            $$(document).trigger('orderReady');
+          }, 500);
+        }
+        me.$$('.toolbar').addClass('hidden');
+        me.$('.back').on('click', function (event) {
+          event.stopPropagation();
+          event.preventDefault();
+          $$(document).trigger('orderReady');
+          me.$router.navigate('/order/');
+        });
+
+        var initOrderDetail = function () {
+          console.error('刷新订单详细');
+          me.$app.preloader.show();
+          me.$app.request.post(window.url + 'type=getcarordershow', {
+            userid: window.userid,
+            oid: me.id,
+            type: me.type
+          },
+            function (data) {
+              const htmlText = '<div class="order-info">' +
+                '<div class="order-info-item">' +
+                ' <div class="icon">' +
+                ' <i class="iconfont icon-location"></i>' +
+                ' </div>' +
+                '<div class="label">始发地/目的地</div>' +
+                ' <div class="value">{{name}}/{{mdarea}}</div>' +
+                '</div>' +
+                '<div class="order-info-item">' +
+                ' <div class="icon">' +
+                ' <i class="iconfont icon-clock"></i>' +
+                '</div>' +
+                '<div class="label">开始/截止时间</div>' +
+                ' <div class="value">{{starttime}} - {{endtime}}</div>' +
+                '</div>' +
+                '<div class="order-info-item">' +
+                '<div class="icon">' +
+                ' <i class="iconfont icon-web-icon-"></i>' +
+                '</div>' +
+                '<div class="label">运费单价</div>' +
+                '<div class="value">{{price}}</div>' +
+                '</div>' +
+                '<div class="order-info-item">' +
+                '<div class="icon">' +
+                ' <i class="iconfont icon-dingdan"></i>' +
+                ' </div>' +
+                '<div class="label">订单量</div>' +
+                ' <div id="count" class="value">{{weight}}</div>' +
+                ' </div>' +
+                '<div class="order-info-item">' +
+                '  <div class="icon">' +
+                '  <i class="iconfont icon-xiaohuoche"></i>' +
+                ' </div>' +
+                '<div class="label">订单车数</div>' +
+                ' <div id="cars" class="value">{{carnum}}</div>' +
+                ' </div>' +
+                '<div class="order-info-item">' +
+                ' <div class="icon">' +
+                '   <i class="iconfont icon-jisuanqi"></i>' +
+                '</div>' +
+                '<div class="label">结款方式</div>' +
+                '<div class="value">{{jkfs}}</div>' +
+                '</div>' +
+                '<div class="order-info-item">' +
+                ' <div class="icon">' +
+                '   <i class="iconfont icon-jisuanqi"></i>' +
+                '</div>' +
+                '<div class="label">暂缺车数</div>' +
+                '<div class="value">{{zqcs}}</div>' +
+                '</div>' +
+                ' </div>' +
+                '<div>' +
+                '<div style="padding: 10px 10px 0 10px;color: #3B3B3B;font-size: 14px;font-weight: bold">车辆信息</div>' +
+                '<div class="car-info-container">{{#each carlist}}' +
+                '<div class="car-info">' +
+                '<div><span class="car-info-title">车牌号</span><span class="car-info-value">{{plate}}</span></div>' +
+                '<div><span class="car-info-title">当前位置</span><span class="car-info-value">{{dqwz}}</span></div>' +
+                '<div><span class="car-info-title">预计到达时间</span><span class="car-info-value">{{yjddsj}}</span></div>' +
+                '<div><span class="car-info-title">装车吨数</span><span class="car-info-value">{{tranzhds}}</span></div>' +
+                '<div><span class="car-info-title">卸车吨数</span><span class="car-info-value">{{tranxhds}}</span></div>' +
+                '<div class="order-btns-container">' +
+                '{{#js_compare \'Number(this.state) == 6 && this.type == 1 && this.chtype == 0\'}}<button data-carid={{id}} class="col button button-fill pay-order-undo">支付佣金</button>{{/js_compare}}' +
+                '{{#js_compare \'Number(this.state) < 4 && this.type == 1\'}}<button data-carid={{id}} data-state={{state}} class="col button button-fill upload-order-undo">上传磅单</button>{{/js_compare}}' +
+                '</div>' +
+                '</div>' +
+                '{{/each}}' +
+                '</div>' +
+                '</div>';
+              // compile it with Template7
+              var compiledTemplate = Template7.compile(htmlText);
+              var result = JSON.parse(data);
+              // result = { "result": "ok", "errocde": "00000", "info": { "id": "175", "name": "辽宁省大连市瓦房店市", "mdarea": "辽宁省盘锦市大洼县", "starttime": "2018-03-14", "endtime": "1900-01-01", "price": "90.00", "carnum": "13", "weight": "390.00", "jkfs": "整单月结", "carlist": [{ "plate": "辽L34671", "dqwz": "", "gps": "1", "tranzhds": "29.820", "tranxhds": "29.900", "id": "325", "yjddsj": "0" }, { "plate": "辽L34671", "dqwz": "", "gps": "1", "tranzhds": "29.820", "tranxhds": "29.900", "id": "325", "yjddsj": "0" }, { "plate": "辽L34671", "dqwz": "", "gps": "1", "tranzhds": "29.820", "tranxhds": "29.900", "id": "325", "yjddsj": "0" }, { "plate": "辽L34671", "dqwz": "", "gps": "1", "tranzhds": "29.820", "tranxhds": "29.900", "id": "325", "yjddsj": "0" }, { "plate": "辽L34671", "dqwz": "", "gps": "1", "tranzhds": "29.820", "tranxhds": "29.900", "id": "325", "yjddsj": "0" }, { "plate": "辽L34671", "dqwz": "", "gps": "1", "tranzhds": "29.820", "tranxhds": "29.900", "id": "325", "yjddsj": "0" }, { "plate": "冀JK0263", "dqwz": "关机", "gps": "1", "tranzhds": "29.630", "tranxhds": "29.560", "id": "326", "yjddsj": "0" }] } };
+              if (result && result.errocde === '00000') {
+                result.info.carlist.map(function (v, i, array) {
+                  array[i].type = me.type;
+                });
+                console.error('订单详情', result);
+                var html = compiledTemplate(result.info);
+                me.$$('#order-detail').html(html);
+                // 支付 
+                me.$('.pay-order-undo').on('click', function (event) {
+                  console.error('car id', event.target.dataset);
+                  var carid = event.target.dataset.carid;
+                  // 先选择优惠券
+                  me.$app.preloader.show();
+                  me.$app.request.post(window.url + 'type=getuseyhq', {
+                    userid: window.userid,
+                    tid: carid
+                  },
+                    function (data) {
+                      me.$app.preloader.hide();
+                      var result = JSON.parse(data);
+                      var yhqHtml = '<div class="popup"><div class="navbar"><div class="navbar-inner sliding"><div class="left"><a id="closeYHQId" href="#" class="link back"><i class="icon icon-back color-blue"></i></a></div><div class="title">选择优惠券</div><div class="right" style="width: 66px"></div></div></div>{{#each list}}<div style="width: 100%;height: 80px;margin: 10px;">' +
+                        '<div class="yhq-container {{#js_compare \'Number(this.sfky) == 0\'}}yhq-disabled{{/js_compare}}" data-set={{@index}}>' +
+                        '<div style="display: flex;flex-direction: column;" data-set={{@index}}>' +
+                        '<div style="height: 60px;line-height: 60px;font-size: 32px;color: #fff;font-weight: bold;width: 80px;text-align: center;">{{mianzhi}}</div>' +
+                        '<div style="height: 20px;line-height: 20px;font-size: 12px;color: #fff;text-align: center;">满{{syquanxian}}可用</div>' +
+                        '</div>' +
+                        '<div style="display: flex;flex-direction: column;" data-set={{@index}}>' +
+                        '<div style="height: 60px;line-height: 60px;font-size: 18px;color: #000000;padding-left: 10px;">{{name}}</div>' +
+                        '<div style="height: 20px;line-height: 20px;font-size: 12px;color: #696A6B;padding-left: 10px;">{{gettime}} - {{endtime}}</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>{{/each}}</div>';
+                      var compiledTemplate = Template7.compile(yhqHtml);
+                      console.error('未完成订单优惠券信息', result);
+                      if (result && result.info && result.info.length > 0) {
+                        var html = compiledTemplate({
+                          list: result.info
+                        });
+                        var yhqPop = me.$app.popup.create({
+                          content: html,
+                        });
+                        yhqPop.open();
+                        me.$('#closeYHQId').on('click', function () {
+                          yhqPop.close();
+                        });
+                        me.$('.yhq-container').on('click', function (event) {
+                          var index = event.target.dataset.set || event.currentTarget.dataset.set;
+                          console.error('选择了第几个优惠券', index);
+                          if (result.info[index].sfky == '0') {
+                            var toastTop = app.toast.create({
+                              text: '当前优惠券不可用!',
+                              position: 'center',
+                              closeTimeout: 2000,
+                            });
+                            toastTop.open();
+                          } else {
+                            gotoPay(carid, result.info[index].id);
+                            yhqPop.close();
+                          }
+                        });
+                      } else {
+                        gotoPay(carid, '');
+                      }
+                    });
+                });
+
+                var gotoPay = function (carid, yhqid) {
+                  // 支付前确认
+                  me.$app.request.post(window.url + 'type=ispayorder', {
+                    userid: window.userid,
+                    id: carid,
+                    yhqid: yhqid
+                  },
+                    function (data) {
+                      var result = JSON.parse(data);
+                      console.error('是否可以支付', result);
+                      if (result.errcode === '00000') {
+                        var type = app.device.android ? '0' : '1';
+                        var payPopup = me.$app.popup.create({
+                          content: '<div class="popup"><iframe width="100%" style="height: 100%;" src="http://by.787866.net/plug/js/jsApi.aspx?id=' + carid + '&ty=' + type + '&yhqid=' + yhqid + '" frameborder="0"></iframe></div>',
+                        });
+                        payPopup.open();
+                        setTimeout(function () {
+                          app.dialog.create({
+                            title: '',
+                            text: '请确认微信支付是否已完成',
+                            buttons: [
+                              {
+                                text: '支付完成',
+                              },
+                              {
+                                text: '重新支付',
+                              },
+                            ],
+                            verticalButtons: false,
+                          }).open();
+                          me.$('.dialog-button').on('click', function (event) {
+                            payPopup.close();
+                            $$(document).trigger('orderReady'); // 刷新订单页
+                            var innerText = event.target.innerText || event.currentTarget.innerText;
+                            if (innerText === '支付完成') {
+                              // 通知后端
+                              me.$app.request.post(window.url + 'type=sfzfyj', { tid: carid }, function (data) { });
+                            } else {
+                              // 通知后端
+                              me.$app.request.post(window.url + 'type=sfzfyj', { tid: carid }, function (data) {
+                                gotoPay(carid, yhqid);
+                              });
+                            }
+                            $$(document).trigger('orderReady');
+                            $$(document).trigger('refreshOrderDetail');
+                          });
+                        }, 8000);
+                      } else {
+                        var toastTop = app.toast.create({
+                          text: result.result,
+                          position: 'center',
+                          closeTimeout: 2000,
+                        });
+                        toastTop.open();
+                      }
+                    });
+                  (function ($, doc) {
+                    $.init({
+                      beforeback: function () {
+                        payPopup.close();
+                        return false;
+                      }
+                    });
+                  }(mui, document));
+                }
+
+                me.$$('.upload-order-undo').on('click', function (event) {
+                  console.error('car id', event.target.dataset.carid);
+                  me.carid = event.target.dataset.carid;
+                  me.state = event.target.dataset.state;
+                  me.$router.navigate('/order-upload/', {
+                    context: me
+                  });
+                });
+              } else {
+                me.$$('#order-detail').html('<span class="no-data">没有订单数据</span>');
+              }
+              me.$app.preloader.hide();
+            });
+        }
+
+        initOrderDetail();
+
+        me.$(document).on('refreshOrderDetail', function () {
+          initOrderDetail();
+        });
+      }
+    },
+  };
+</script>

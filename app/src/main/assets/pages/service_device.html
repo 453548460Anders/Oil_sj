@@ -1,0 +1,136 @@
+<template>
+  <div class="page search-location" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back map-back">
+            <i class="icon icon-back color-blue"></i>
+          </a>
+        </div>
+        <div class="title">{{title}}</div>
+        <div class="right" style="width: 66px"></div>
+      </div>
+    </div>
+    <div class="page-content" id="service-device-id">
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        var me = this;
+        console.error('service device mounted');
+        me.$('.back').on('click', function (event) {
+          event.stopPropagation();
+          event.preventDefault();
+          me.$router.back();
+          setTimeout(function () {
+            $$(document).trigger('meReady');
+            $$(document).trigger('serviceReady');
+
+            $$('#service-user-name')[0] ? $$('#service-user-name')[0].innerHTML = window.name : '';
+            $$('#service-user-telphone')[0] ? $$('#service-user-telphone')[0].innerHTML = window.telphone : '';
+
+            $$('#me-chepaihao-id')[0] ? $$('#me-chepaihao-id')[0].innerHTML = window.plate : '';
+            $$('#me-guahao-id')[0] ? $$('#me-guahao-id')[0].innerHTML = window.guahao : '';
+            $$('#me-name-id')[0] ? $$('#me-name-id')[0].innerHTML = window.name : '';
+            $$('#me-idcard-id')[0] ? $$('#me-idcard-id')[0].innerHTML = window.idcard : '';
+            $$('#me-telphone-id')[0] ? $$('#me-telphone-id')[0].innerHTML = window.telphone : '';
+            $$('#me-weight-id')[0] ? $$('#me-weight-id')[0].innerHTML = window.weight : '';
+            $$('#me-chedui-id')[0] ? $$('#me-chedui-id')[0].innerHTML = window.sscd : '';
+          }, 500);
+        });
+        mui.back = function () {
+          me.$router.back();
+          setTimeout(function () {
+            $$(document).trigger('meReady');
+            $$(document).trigger('serviceReady');
+
+            $$('#service-user-name')[0] ? $$('#service-user-name')[0].innerHTML = window.name : '';
+            $$('#service-user-telphone')[0] ? $$('#service-user-telphone')[0].innerHTML = window.telphone : '';
+
+            $$('#me-chepaihao-id')[0] ? $$('#me-chepaihao-id')[0].innerHTML = window.plate : '';
+            $$('#me-guahao-id')[0] ? $$('#me-guahao-id')[0].innerHTML = window.guahao : '';
+            $$('#me-name-id')[0] ? $$('#me-name-id')[0].innerHTML = window.name : '';
+            $$('#me-idcard-id')[0] ? $$('#me-idcard-id')[0].innerHTML = window.idcard : '';
+            $$('#me-telphone-id')[0] ? $$('#me-telphone-id')[0].innerHTML = window.telphone : '';
+            $$('#me-weight-id')[0] ? $$('#me-weight-id')[0].innerHTML = window.weight : '';
+            $$('#me-chedui-id')[0] ? $$('#me-chedui-id')[0].innerHTML = window.sscd : '';
+          }, 500);
+        }
+        me.$app.preloader.show();
+        // 获取地理位置
+        console.error('开始获取位置');
+        plus.geolocation.getCurrentPosition(function (position) {
+          console.error('获取位置成功' + JSON.stringify(position));
+          me.$app.request.post(window.url + 'type=GetShopServince',
+            { lat: position.coords.latitude, lng: position.coords.longitude, km: '', types: me.type },
+            function (data) {
+              me.$app.preloader.hide();
+              const htmlText = '<div class="list">' +
+                '<ul>' +
+                '{{#each list}}' +
+                ' <li>' +
+                ' <a href="#" class="item-link item-content service-device-item" data-set={{@index}}>' +
+                ' <div class="item-media" style="width: 45px;height: 45px;">' +
+                '<img src="{{image}}" onerror="this.src=\'./images/default_device.png\'" style="width: 100%;height: 100%;"/>' +
+                ' </div>' +
+                ' <div class="item-inner service-device-inner">' +
+                '  <div class="item-title">' +
+                ' <div>{{name}}</div>' +
+                ' <div>' +
+                '    <i class="iconfont icon-chizi" style="color: #CBCCCD;margin-right: 5px;"></i>距离您{{Jl}}KM' +
+                ' </div>' +
+                ' </div>' +
+                '  <i class="iconfont icon-location" style="color: #C31012"></i>' +
+                '</div>' +
+                '   </a>' +
+                ' </li>' +
+                '{{/each}}' +
+                ' </ul>' +
+                '</div>';
+              // compile it with Template7
+              var compiledTemplate = Template7.compile(htmlText);
+              const result = JSON.parse(data);
+              if (result && result.length > 0) {
+                const resultList = result.map(function (v) {
+                  v.Jl = (v.Jl / 1000).toFixed(2);
+                  v.image = window.imageUrl + (!v.fannex ? '' : v.fannex);
+                  return v;
+                });
+                var html = compiledTemplate({
+                  list: resultList
+                });
+                me.$$('#service-device-id').html(html);
+                me.$$('.service-device-item').on('click', function (event) {
+                  const index = (event.target.dataset && event.target.dataset.set) || (event.currentTarget && event.currentTarget.dataset.set);
+                  console.error('第几个' + JSON.stringify(resultList[index]));
+                  me.$router.navigate('/service_device_map/', {
+                    context: resultList[index]
+                  });
+                });
+              } else {
+                me.$$('#service-device-id').html('<span class="no-data">附近没有' + me.title + '!</span>');
+              }
+            });
+        }, function () {
+          me.$app.preloader.hide();
+          var toastTop = app.toast.create({
+            text: '定位失败，请稍后重试!',
+            position: 'center',
+            closeTimeout: 2000,
+          });
+          setTimeout(function () {
+            me.$router.back();
+          }, 2000);
+          toastTop.open();
+        }, { timeout: 10000 });
+        me.$$('.toolbar').addClass('hidden');
+      }
+    },
+    beforeDestroy: function () {
+      this.$$('.toolbar').removeClass('hidden');
+    },
+  }
+</script>

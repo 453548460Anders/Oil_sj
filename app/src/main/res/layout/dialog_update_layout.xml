@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:background="@drawable/update_dialog_background"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:text="@string/updateexist"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content" />
+
+    <SeekBar
+        android:progressDrawable="@drawable/seekbar_progress"
+        android:id="@+id/update_dialog_seekbar"
+        android:thumb="@null"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:max="100"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#000000"
+            android:background="@drawable/update_dialog_cancle_background"
+            android:textSize="16dp"
+            android:id="@+id/update_dialog_cancle"
+            android:padding="5dp"
+            android:gravity="center"
+            android:text="@string/updatecancle"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="#ffffff"
+            android:background="@drawable/update_dialog_sure_background"
+            android:textSize="16dp"
+            android:id="@+id/update_dialog_sure"
+            android:padding="5dp"
+            android:gravity="center"
+            android:text="@string/updatesure"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

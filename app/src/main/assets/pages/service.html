@@ -1,0 +1,117 @@
+<template>
+  <div class="page" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="title">服务</div>
+      </div>
+    </div>
+    <div class="page-content news">
+      <div class="list">
+        <ul>
+          <li id="service_zhengguan">
+            <a href="#" class="item-link item-content">
+              <div class="item-media">
+                <i class="iconfont icon-chuguan" style="color: #FF6A42"></i>
+              </div>
+              <div class="item-inner">
+                <div class="item-title">蒸罐</div>
+              </div>
+            </a>
+          </li>
+          <li id="service_fix">
+            <a href="#" class="item-link item-content">
+              <div class="item-media">
+                <i class="iconfont icon-leijianzhuxiulix" style="color: #FE6B42"></i>
+              </div>
+              <div class="item-inner">
+                <div class="item-title">修理厂</div>
+              </div>
+            </a>
+          </li>
+          <li id="service_query_km">
+            <a href="#" class="item-link item-content">
+              <div class="item-media">
+                <i class="iconfont icon-location" style="color: #5690F4"></i>
+              </div>
+              <div class="item-inner">
+                <div class="item-title">公里数查询</div>
+              </div>
+            </a>
+          </li>
+          <li id="service_gift">
+            <a href="#" class="item-link item-content">
+              <div class="item-media">
+                <i class="iconfont icon-gift_icon" style="color: #FF3D57"></i>
+              </div>
+              <div class="item-inner">
+                <div class="item-title">积分商城</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        const me = this;
+        me.$(document).on('serviceReady', function () {
+          console.error('-----------服务页面 serviceReady---------------', window);
+          mui.back = function () {
+            if (!first) {
+              first = new Date().getTime();
+              mui.toast('再按一次退出应用');
+              setTimeout(function () {
+                first = null;
+              }, 1000);
+            } else {
+              if (new Date().getTime() - first < 1000) {
+                plus.runtime.quit();
+              }
+            }
+          }
+          setTimeout(function () {
+            // 按钮事件
+            // 违章
+            me.$$('#service_violate').on('click', function () {
+              me.$router.navigate('/service_violate/');
+            });
+            // 蒸罐
+            me.$$('#service_zhengguan').on('click', function () {
+              console.error('蒸罐');
+              me.$router.navigate('/service_device/', {
+                context: {
+                  title: '蒸罐',
+                  type: '1'
+                }
+              });
+            });
+            // 修理厂
+            me.$$('#service_fix').on('click', function () {
+              me.$router.navigate('/service_device/', {
+                context: {
+                  title: '修理厂',
+                  type: '0'
+                }
+              });
+            });
+            // 公里数查询
+            me.$$('#service_query_km').on('click', function () {
+              me.$router.navigate('/service_query_km/');
+            });
+            // 积分商城
+            me.$$('#service_gift').on('click', function () {
+              me.$router.navigate('/service_gift/');
+            });
+            // 兑换记录
+            me.$$('#record').on('click', function () {
+              me.$router.navigate('/service_record/');
+            });
+          }, 100);
+        });
+      },
+    },
+  }
+</script>

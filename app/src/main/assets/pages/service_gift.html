@@ -1,0 +1,306 @@
+<template>
+  <div class="page search-location">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back color-blue"></i>
+          </a>
+        </div>
+        <div class="title">商品列表</div>
+        <div class="right" style="width: 66px"></div>
+      </div>
+    </div>
+    <div id="goodsId" class="page-content">
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        this.$$('.toolbar').addClass('hidden');
+        var me = this;
+
+        var defaultPosition = {};
+
+        var allAddress = [];
+
+        var addressId = '';
+
+        var goodId = '';
+
+        // 弹出选择地址
+        var addressPopupOpen = function () {
+          const htmlText = '<div class="popup"><div class="navbar"><div class="navbar-inner sliding">' +
+            '<div class="left">' +
+            ' <a id="address-back-id" href="#" class="link back">' +
+            '  <i class="icon icon-back color-blue"></i>' +
+            ' </a>' +
+            ' </div>' +
+            ' <div class="title">选择收货地址</div>' +
+            ' <div class="right" style="width: 66px"></div>' +
+            ' </div>' +
+            ' </div><div style="width: 100%;height: calc(100% - 56px);overflow: auto;">' +
+            '<div class="list links-list">' +
+            '<ul>{{#each list}}' +
+            '  <li class="address-item-li" data-id="{{id}}" data-sheng="{{sheng}} {{shi}} {{qu}}" data-address="{{address}}" data-name="{{name}}" data-mobile="{{mobile}}">' +
+            '   <a data-id="{{id}}" data-sheng="{{sheng}} {{shi}} {{qu}}" data-address="{{address}}" data-name="{{name}}" data-mobile="{{mobile}}" href="#" style="height: 85px;background-color: #fff;">' +
+            '    <div data-id="{{id}}" data-sheng="{{sheng}} {{shi}} {{qu}}" data-address="{{address}}" data-name="{{name}}" data-mobile="{{mobile}}" class="item-title">' +
+            '      <div style="font-size: 14px">{{sheng}} {{shi}} {{qu}}</div>' +
+            '      <div style="font-size: 12px;color: #888989">{{address}}</div>' +
+            '      <div style="font-size: 14px">{{name}} {{mobile}}</div>' +
+            '    </div>' +
+            '   </a>' +
+            '  </li>{{/each}}' +
+            ' </ul>' +
+            ' </div>' +
+            ' </div></div>';
+          var compiledTemplate = Template7.compile(htmlText);
+          var html = compiledTemplate({
+            list: allAddress
+          });
+
+          var addressPopup = me.$app.popup.create({
+            content: html,
+            on: {
+              opened: function (popup) {
+                console.log('Popup opened');
+                me.$('#address-back-id').on('click', function () {
+                  addressPopup.close();
+                });
+                me.$('.address-item-li').on('click', function (event) {
+                  addressPopup.close();
+                  me.$('#sheng')[0].innerHTML = event.target.dataset.sheng;
+                  me.$('#address')[0].innerHTML = event.target.dataset.address;
+                  me.$('#detail')[0].innerHTML = event.target.dataset.name + ' ' + event.target.dataset.mobile;
+                  addressId = event.target.dataset.id;
+                });;
+              },
+            }
+          });
+          addressPopup.open();
+        }
+
+        // 弹出积分兑换页
+        var popup = function (data) {
+          console.error('商品信息', data);
+          var result = Object.assign(data, { address: defaultPosition });
+          const htmlText = '<div class="popup"><div class="navbar"><div class="navbar-inner sliding">' +
+            '<div class="left">' +
+            ' <a id="duihuan-back-id" href="#" class="link back">' +
+            '  <i class="icon icon-back color-blue"></i>' +
+            ' </a>' +
+            ' </div>' +
+            ' <div class="title">积分兑换</div>' +
+            ' <div class="right" style="width: 66px"></div>' +
+            ' </div>' +
+            ' </div><div style="width: 100%;height: 100%;">' +
+            '<div style="display: flex;flex-direction: row;background: #fff;">' +
+            ' <div style="width: 80px;height: 80px;padding: 10px;">' +
+            ' <img width="100%" height="100%" src="{{ fannex }}" onerror="this.src = \'./images/default_goods.png\';" />' +
+            '</div>' +
+            '<div style="width: calc(100% - 80px);display: flex;flex-direction: column;justify-content: center;align-items: flex-start;padding-left: 10px;">' +
+            ' <div>{{name}}</div>' +
+            ' <div><span style="color: #C60300">{{jifen}}</span> 积分</div>' +
+            ' </div>' +
+            '</div>' +
+            '<div style="height: 35px;line-height: 35px;padding-left: 10px;background: #F7F8F9;">' +
+            ' 收货人信息' +
+            '</div>' +
+            '<div class="list links-list">' +
+            '<ul>' +
+            '  <li>' +
+            '   <a id="address-list-id" href="#" style="height: 85px;background-color: #fff;">' +
+            '    <div class="item-title">' +
+            '      <div id="sheng" style="font-size: 14px">{{address.sheng}} {{address.shi}} {{address.qu}}</div>' +
+            '      <div id="address" style="font-size: 12px;color: #888989">{{address.address}}</div>' +
+            '      <div id="detail" style="font-size: 14px">{{address.name}} {{address.mobile}}</div>' +
+            '    </div>' +
+            '   </a>' +
+            '  </li>' +
+            ' </ul>' +
+            ' </div>' +
+            ' <div class="report-submit">' +
+            '  <button class="col button button-fill report-submit-btn" id="duihuan-btn-id">确认</button>' +
+            ' </div>' +
+            ' </div></div>';
+          var compiledTemplate = Template7.compile(htmlText);
+          var html = compiledTemplate(result);
+
+          var dynamicPopup = me.$app.popup.create({
+            content: html,
+            on: {
+              opened: function (popup) {
+                me.$('#duihuan-back-id').on('click', function () {
+                  dynamicPopup.close();
+                });
+                me.$('#address-list-id').on('click', function () {
+                  addressPopupOpen();
+                });
+                // 兑换商品
+                me.$('#duihuan-btn-id').on('click', function () {
+                  me.$app.request.post(window.url + 'type=addproductduihuan',
+                    { gid: window.userid, pid: goodId, addressid: addressId },
+                    function (data) {
+                      console.error('兑换商品', JSON.parse(data));
+                      var result = JSON.parse(data);
+                      if (result.errcode === '00000') {
+                        var toastTop = app.toast.create({
+                          text: '兑换成功!',
+                          position: 'center',
+                          closeTimeout: 2000,
+                        });
+                        toastTop.open();
+                        // 刷新积分
+                        me.$app.request.post(window.url + 'type=getjifen',
+                          { gid: window.userid },
+                          function (data) {
+                            console.error('积分', data);
+                            var result = JSON.parse(data);
+                            if (result.result) {
+                              window.jifen = result.result;
+                              $$('#jifenId')[0] ? $$('#jifenId')[0].innerHTML = window.jifen : '';
+                              $$('#service-jifen-id')[0] ? $$('#service-jifen-id')[0].innerHTML = window.jifen : '';
+                            }
+                          });
+                        setTimeout(function () {
+                          dynamicPopup.close();
+                        }, 2000);
+                      } else {
+                        var toastTop = app.toast.create({
+                          text: result.result || '系统错误!',
+                          position: 'center',
+                          closeTimeout: 2000,
+                        });
+                        toastTop.open();
+                        setTimeout(function () {
+                          dynamicPopup.close();
+                        }, 2000);
+                      }
+                    });
+                });
+              },
+            }
+          });
+          dynamicPopup.open();
+        }
+
+        var initGoodsList = function () {
+          me.$app.request.post(window.url + 'type=getproductlist',
+            { gid: window.userid, userid: window.userid, tuijian: 1, pagecurr: 1 },
+            function (data) {
+              console.error('商品列表', JSON.parse(data));
+              const htmlText = '{{#each list}}<div class="good-container" data-set={{@index}}>' +
+                '<div style="display: flex;flex-direction: row;"><div style="display: flex;flex-direction: column;"><div data-set={{@index}}>{{name}}</div>' +
+                '<div data-set={{@index}}>{{jifen}}积分</div></div><div class="doCollect" data-set={{@index}} style="width: 21px;height: 17px;margin-left: 20px;margin-top: 10px;"><img id="collection"  data-set={{@index}} width=100% height=100% src=\'./images/h{{iscollect}}.png\'/></div></div>' +
+                '<div data-set={{@index}} style="display: flex;justify-content: center;width: 90%;height: 90px;margin-top: 10px;">' +
+                '<img data-set={{@index}} width=100% height=100% src="{{fannex}}" onerror="this.src = \'./images/default_goods.png\';" />' +
+                '</div>' +
+                '</div>{{/each}}';
+              var compiledTemplate = Template7.compile(htmlText);
+              const result = JSON.parse(data);
+              if (result && result.info && result.info.length > 0) {
+                result.info.forEach(function (v, i, array) {
+                  array[i].fannex = window.imageUrl + v.fannex;
+                });
+                var html = compiledTemplate({
+                  list: result.info
+                });
+                me.$$('#goodsId').html(html);
+                me.$('.good-container').on('click', function (event) {
+                  goodId = result.info[event.target.dataset.set].id;
+                  popup(result.info[event.target.dataset.set]);
+                });
+
+                // 收藏按钮
+                me.$('.doCollect').on('click', function (event) {
+                  event.stopPropagation();
+                  event.preventDefault();
+                  goodId = result.info[event.target.dataset.set].id;
+                  var iscollect = result.info[event.target.dataset.set].iscollect;
+                  if (iscollect === '1') {
+                    // 取消收藏
+                    me.$app.request.post(window.url + 'type=delproductshoucang',
+                      { userid: window.userid, pid: goodId },
+                      function (data) {
+                        var result = JSON.parse(data);
+                        if (result.errcode === '00000') {
+                          var toastTop = app.toast.create({
+                            text: '取消收藏成功!',
+                            position: 'center',
+                            closeTimeout: 2000,
+                          });
+                          toastTop.open();
+                        } else {
+                          var toastTop = app.toast.create({
+                            text: result.result || '系统错误!',
+                            position: 'center',
+                            closeTimeout: 2000,
+                          });
+                          toastTop.open();
+                        }
+                        initGoodsList();
+                      });
+                  } else {
+                    // 收藏
+                    me.$app.request.post(window.url + 'type=addproductshoucang',
+                      { userid: window.userid, pid: goodId },
+                      function (data) {
+                        var result = JSON.parse(data);
+                        if (result.errcode === '00000') {
+                          var toastTop = app.toast.create({
+                            text: '收藏成功!',
+                            position: 'center',
+                            closeTimeout: 2000,
+                          });
+                          toastTop.open();
+                        } else {
+                          var toastTop = app.toast.create({
+                            text: result.result || '系统错误!',
+                            position: 'center',
+                            closeTimeout: 2000,
+                          });
+                          toastTop.open();
+                        }
+                        initGoodsList();
+                      });
+                  }
+                });
+              } else {
+                me.$$('#goodsId').html('<span class="no-data">没有商品</span>');
+              }
+            });
+        }
+
+        initGoodsList();
+
+        // 获取默认收货地址
+        me.$app.request.post(window.url + 'type=getmrshaddress',
+          { gid: window.userid },
+          function (data) {
+            console.error('默认收货地址', JSON.parse(data));
+            var result = JSON.parse(data);
+            if (result && result.info && result.info.length === 1) {
+              defaultPosition = result.info[0];
+              addressId = defaultPosition.id;
+            }
+          });
+
+        // 获取所有收货地址
+        me.$app.request.post(window.url + 'type=getshaddress',
+          { gid: window.userid, pagecurr: 1 },
+          function (data) {
+            console.error('所有收货地址', JSON.parse(data));
+            var result = JSON.parse(data);
+            if (result && result.info && result.info.length > 0) {
+              allAddress = result.info;
+            }
+          });
+      }
+    },
+    beforeDestroy: function () {
+      this.$$('.toolbar').removeClass('hidden');
+    },
+  };
+</script>

@@ -1,0 +1,215 @@
+<template>
+  <div class="page violate-container">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back color-blue"></i>
+          </a>
+        </div>
+        <div class="title">违章查询</div>
+        <div class="right" style="width: 66px"></div>
+      </div>
+    </div>
+    <div class="page-content" style="padding-top: 0 !important;">
+      <div class="list inline-labels no-hairlines-md">
+        <ul>
+          <li>
+            <a class="item-link smart-select smart-select-init" data-open-in="sheet" sheetCloseLinkText="确定">
+              <select id="select-province" name="mac-windows">
+              </select>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title" style="font-size: 16px!important;">选择省</div>
+                  <div id="select-msg" style="color: #333;font-size: 14px;">京</div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">车牌号</div>
+              <div class="item-input-wrap">
+                <input id="lsnum" type="text" placeholder="请输入车牌号剩余部分">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">车牌类型</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="请选择" readonly="readonly" id="car_num_type">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">发动机号</div>
+              <div class="item-input-wrap">
+                <input id="fadongjihao" type="text" placeholder="请输入发动机号">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">车架号</div>
+              <div class="item-input-wrap">
+                <input id="chejiahao" type="text" placeholder="请输入车架号">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="report-submit">
+        <button id="queryWeizhang" class="col button button-fill report-submit-btn sheet-open" data-sheet=".my-sheet">
+          查询
+        </button>
+      </div>
+      <div class="car-prompt-info">
+        以上信息仅用于查询违章,请放心填写。
+      </div>
+      <div class="sheet-modal my-sheet" style="height: calc(100% - 100px)">
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <div class="left"></div>
+            <div class="right">
+              <a class="link sheet-close" href="#">完成</a>
+            </div>
+          </div>
+        </div>
+        <div class="sheet-modal-inner">
+          <div class="list media-list">
+            <ul id="violate-list-id">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        console.log('违章查询页', this);
+        var me = this;
+
+        // 隐藏toolbar
+        me.$$('.toolbar').addClass('hidden');
+
+        // 初始化车牌类型
+        var pickerDevice = app.picker.create({
+          inputEl: '#car_num_type',
+          toolbarCloseText: '确定',
+          cols: [
+            {
+              textAlign: 'center',
+              values: ['小型汽车', '大型汽车', '使馆汽车', '领馆汽车', '境外汽车', '外籍汽车', '两、三轮摩托', '轻便摩托车', '使馆摩托车', '领馆摩托车', '境外摩托车', '外籍摩托车', '农用运输车']
+            }
+          ]
+        });
+
+
+        var carorg = '', lsprefix = '';
+        // this.$app.preloader.show();
+        me.$app.request.post(window.url + 'type=GetCarOrg',
+          {},
+          function (data) {
+            console.error('获得交管局', data);
+            data = '{"code":"10000","data":[{"province":"北京","lsnum":"","lsprefix":"京","carorg":"beijing","frameno":"0","engineno":"100","list":[]},{"province":"安徽","lsnum":"","lsprefix":"皖","carorg":"anhui","frameno":"6","engineno":"6","list":[]},{"province":"福建","lsnum":"","lsprefix":"闽","carorg":"fujian","frameno":"6","engineno":"6","list":[]},{"province":"甘肃","lsnum":"","lsprefix":"甘","carorg":"gansu","frameno":"100","engineno":"6","list":[]},{"province":"广东","lsnum":"","lsprefix":"粤","carorg":"guangdong","frameno":"6","engineno":"6","list":[]},{"province":"广西","lsnum":"","lsprefix":"桂","carorg":"guangxi","frameno":"6","engineno":"6","list":[]},{"province":"贵州","lsnum":"","lsprefix":"贵","carorg":"guizhou","frameno":"0","engineno":"6","list":[]},{"province":"海南","lsnum":"","lsprefix":"琼","carorg":"hainan","frameno":"0","engineno":"6","list":[]},{"province":"河北","lsnum":"","lsprefix":"冀","carorg":"hebei","frameno":"6","engineno":"6","list":[]},{"province":"河南","lsnum":"","lsprefix":"豫","carorg":"henan","frameno":"6","engineno":"6","list":[]},{"province":"黑龙江","lsnum":"","lsprefix":"黑","carorg":"heilongjiang","frameno":"100","engineno":"6","list":[]},{"province":"湖北","lsnum":"","lsprefix":"鄂","carorg":"hubei","frameno":"6","engineno":"0","list":[]},{"province":"湖南","lsnum":"","lsprefix":"湘","carorg":"hunan","frameno":"6","engineno":"6","list":[]},{"province":"吉林","lsnum":"","lsprefix":"吉","carorg":"jilin","frameno":"6","engineno":"0","list":[]},{"province":"江苏","lsnum":"","lsprefix":"苏","carorg":"jiangsu","frameno":"0","engineno":"6","list":[]},{"province":"江西","lsnum":"","lsprefix":"赣","carorg":"jiangxi","frameno":"6","engineno":"6","list":[]},{"province":"辽宁","lsnum":"","lsprefix":"辽","carorg":"liaoning","frameno":"100","engineno":"6","list":[]},{"province":"内蒙古","lsnum":"","lsprefix":"蒙","carorg":"neimenggu","frameno":"0","engineno":"100","list":[]},{"province":"宁夏","lsnum":"","lsprefix":"宁","carorg":"ningxia","frameno":"6","engineno":"4","list":[]},{"province":"青海","lsnum":"","lsprefix":"青","carorg":"qinghai","frameno":"100","engineno":"6","list":[]},{"province":"山东","lsnum":"","lsprefix":"鲁","carorg":"shandong","frameno":"6","engineno":"6","list":[]},{"province":"山西","lsnum":"","lsprefix":"晋","carorg":"shanxi","frameno":"6","engineno":"6","list":[]},{"province":"陕西","lsnum":"","lsprefix":"陕","carorg":"shannxi","frameno":"0","engineno":"6","list":[]},{"province":"上海","lsnum":"","lsprefix":"沪","carorg":"shanghai","frameno":"0","engineno":"100","list":[]},{"province":"四川","lsnum":"","lsprefix":"川","carorg":"sichuan","frameno":"8","engineno":"0","list":[]},{"province":"天津","lsnum":"","lsprefix":"津","carorg":"tianjin","frameno":"6","engineno":"6","list":[]},{"province":"西藏","lsnum":"","lsprefix":"藏","carorg":"xizang","frameno":"6","engineno":"6","list":[]},{"province":"新疆","lsnum":"","lsprefix":"新","carorg":"xinjiang","frameno":"6","engineno":"6","list":[]},{"province":"云南","lsnum":"","lsprefix":"云","carorg":"yunnan","frameno":"6","engineno":"6","list":[]},{"province":"浙江","lsnum":"","lsprefix":"浙","carorg":"zhejiang","frameno":"6","engineno":"6","list":[]},{"province":"重庆","lsnum":"","lsprefix":"渝","carorg":"chongqing","frameno":"6","engineno":"6","list":[]}],"updatemsg":"接入直连通道，交管局参数变化较大，多为增加参数。云南、海南、河南、安徽等交管局，可按原有参数查询，不受影响。","updatetime":"new Date(1474329600000)"}'
+            var result = JSON.parse(data);
+            if (result.code === '10000') {
+              const htmlText = '{{#each list}}<option value="{{carorg}}" data-frameno="{{frameno}}" data-engineno="{{engineno}}">{{lsprefix}}</option>{{/each}}';
+              var compiledTemplate = Template7.compile(htmlText);
+              var html = compiledTemplate({
+                list: result.data
+              });
+              me.$$('#select-province').html(html);
+              var defaultVal = result.data.filter(function (v) {
+                return v.lsprefix === '京';
+              });
+              carorg = defaultVal[0].carorg;
+              lsprefix = defaultVal[0].innerHTML;
+              me.$('#fadongjihao').attr('placeholder', (defaultVal[0].engineno === -1 || defaultVal[0].engineno == 100) ? '请输入全部发动机号码' : '请输入' + defaultVal[0].engineno + '位发动机号码');
+              me.$('#chejiahao').attr('placeholder', (defaultVal[0].frameno === -1 || defaultVal[0].frameno == 0) ? '请输入全部车架号码' : '请输入' + defaultVal[0].engineno + '位车架号码');
+
+              console.error('默认值', defaultVal);
+              me.$('#select-province').on('change', function (event) {
+                me.$('#select-msg').html('');
+                var selectedOption = event.target.selectedOptions[0].dataset;
+                console.error('省份', selectedOption);
+                carorg = event.target.selectedOptions[0].carorg;
+                lsprefix = event.target.selectedOptions[0].innerHTML;
+                me.$('#fadongjihao').attr('placeholder', (selectedOption.engineno === -1 || selectedOption.engineno == 100) ? '请输入全部发动机号码' : '请输入' + selectedOption.engineno + '位发动机号码');
+                me.$('#chejiahao').attr('placeholder', (selectedOption.frameno === -1 || selectedOption.frameno == 0) ? '请输入全部车架号码' : '请输入' + selectedOption.engineno + '位车架号码');
+              });
+            }
+          });
+
+        me.$('#queryWeizhang').on('click', function () {
+          me.$app.request.post(window.url + 'type=GetWeiZhang',
+            {
+              carorg: carorg,
+              lsnum: me.$('#lsnum')[0].value,
+              lsprefix: lsprefix,
+              cartype: me.$('#car_num_type')[0].value,
+              frameno: me.$('#chejiahao')[0].value,
+              engineno: me.$('#fadongjihao')[0].value,
+            },
+            function (data) {
+              console.error('查询违章', data);
+              var result = JSON.parse(data);
+              if (result.status === '0') {
+                const htmlText =
+                  ' {{#each list}}' +
+                  ' <li>' +
+                  '<a href="#" class="item-link item-content">' +
+                  ' <div class="item-inner">' +
+                  '<div class="violate-item">' +
+                  '<div class="violate-item-title">违章地点</div>' +
+                  '<div class="violate-item-content">{{time}}</div>' +
+                  '</div>' +
+                  '<div class="violate-item">' +
+                  '<div class="violate-item-title">违章时间</div>' +
+                  '<div class="violate-item-content">{{address}}</div>' +
+                  '</div>' +
+                  '<div class="violate-item">' +
+                  '<div class="violate-item-title">违章原因</div>' +
+                  '<div class="violate-item-content">{{content}}</div>' +
+                  '</div>' +
+                  ' </div>' +
+                  ' </a>' +
+                  '</li>' +
+                  ' {{/each}}';
+                // compile it with Template7
+                var compiledTemplate = Template7.compile(htmlText);
+                if (result && result.list && result.list.length > 0) {
+                  var html = compiledTemplate({
+                    list: result.list
+                  });
+                  me.$$('#violate-list-id').html(html);
+                } else {
+                  me.$$('#violate-list-id').html('<span class="no-data">没有违章信息</span>');
+                }
+
+              } else {
+                var toastTop = app.toast.create({
+                  text: '您输入的信息有误，请检查！',
+                  position: 'center',
+                  closeTimeout: 2000,
+                });
+                toastTop.open();
+              }
+            });
+        });
+      }
+    },
+    beforeDestroy: function () {
+      this.$$('.toolbar').removeClass('hidden');
+    },
+  }
+</script>

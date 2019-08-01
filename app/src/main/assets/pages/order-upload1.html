@@ -1,0 +1,477 @@
+<template>
+  <div class="page" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back color-blue"></i>
+          </a>
+        </div>
+        <div class="title">磅单上传</div>
+        <div class="right" style="width: 66px"></div>
+        <div class="subnavbar upload-order-tabs">
+          <div class="tabbar">
+            <div class="toolbar-inner">
+              <a id="tab1-id" href="#tab1" class="tab-link tab-link-active">装车磅单</a>
+              <a id="tab2-id" href="#tab2" class="tab-link">卸车磅单</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-content hide-navbar-on-scroll">
+      <div class="tabs">
+        <div class="tab tab-active" id="tab1">
+          <div class="list inline-labels no-hairlines-md">
+            <ul>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">订单号</div>
+                  <div class="item-input-wrap">
+                    <input id="tab1-dingdanhao-id" type="text" placeholder="请输入" readonly="readonly">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">过磅日期</div>
+                  <div class="item-input-wrap">
+                    <input id="tab1-date-id" type="text" placeholder="请选择日期" onfocus="(this.type='date')" onblur="(this.type='text')">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">装货地</div>
+                  <div class="item-input-wrap">
+                    <input id="tab1-zhd-id" type="text" placeholder="请输入" readonly="readonly">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">车牌号</div>
+                  <div class="item-input-wrap">
+                    <input id="tab1-plate-id" type="text" placeholder="请输入" readonly="readonly">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">货物名称</div>
+                  <div class="item-input-wrap">
+                    <input id="tab1-proname-id" type="text" placeholder="请输入" readonly="readonly">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">订单运费</div>
+                  <div class="item-input-wrap">
+                    <input id="tab1-price-id" type="text" placeholder="请输入" readonly="readonly">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">装货数</div>
+                  <div class="item-input-wrap">
+                    <input id="tab1-zhds-id" type="number" placeholder="请输入">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input order-upload-container">
+                <div class="item-inner ">
+                  <div class="item-title item-label" style="width: 200px">装车磅单附件</div>
+                  <div>
+                    <button class="col button button-fill order-upload-btn" data-set="tab1">上传</button>
+                  </div>
+                </div>
+                <div class="order-upload-image" id="order-upload-image-tab1">
+                  <img src="./images/default_order.png" style="max-width: 100%;max-height: 100%" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab" id="tab2">
+          <div class="list inline-labels no-hairlines-md">
+            <ul>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">订单号</div>
+                  <div class="item-input-wrap">
+                    <input id="tab2-dingdanhao-id" type="text" placeholder="请输入" readonly="readonly">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">过磅日期</div>
+                  <div class="item-input-wrap">
+                    <input id="tab2-date-id" type="text" placeholder="请选择日期" onfocus="(this.type='date')" onblur="(this.type='text')">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">卸货地</div>
+                  <div class="item-input-wrap">
+                    <input id="tab2-xhd-id" type="text" placeholder="请输入">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">车牌号</div>
+                  <div class="item-input-wrap">
+                    <input id="tab2-plate-id" type="text" placeholder="请输入">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">货物名称</div>
+                  <div class="item-input-wrap">
+                    <input id="tab2-proname-id" type="text" placeholder="请输入">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">订单运费</div>
+                  <div class="item-input-wrap">
+                    <input id="tab2-price-id" type="text" placeholder="请输入">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">卸货数</div>
+                  <div class="item-input-wrap">
+                    <input id="tab2-xhds-id" type="number" placeholder="请输入">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input order-upload-container">
+                <div class="item-inner ">
+                  <div class="item-title item-label" style="width: 200px;">卸车磅单图片</div>
+                  <div>
+                    <button class="col button button-fill order-upload-btn" data-set="tab2">上传</button>
+                  </div>
+                </div>
+                <div class="order-upload-image" id="order-upload-image-tab2">
+                  <img src="./images/default_order.png" style="max-width: 100%;max-height: 100%" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="order-upload-btn-container">
+        <button id="order-upload-submit-id" class="col button button-fill">提交</button>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        var me = this;
+        console.error('上传磅单', this);
+        mui.back = function () {
+          me.$router.back();
+          setTimeout(function () {
+            $$(document).trigger('hallReady');
+            $$(document).trigger('orderReady');
+          }, 500);
+        }
+        me.$('.back').on('click', function (event) {
+          event.stopPropagation();
+          event.preventDefault();
+          $$(document).trigger('hallReady');
+          me.$router.navigate('/order/');
+        });
+        me.$$('.toolbar').addClass('hidden');
+        var imgData1 = '', imgData2 = '', tab = 'tab1';
+        me.$('#tab1-id').on('click', function () {
+          tab = 'tab1';
+        });
+        me.$('#tab2-id').on('click', function () {
+          tab = 'tab2';
+        });
+        var loadErr = function () {
+          var toastTop = app.toast.create({
+            text: '读取照片失败,请重试!',
+            position: 'center',
+            closeTimeout: 2000,
+          });
+          toastTop.open();
+        }
+        //拍照 
+        var getBase64Image = function (img) {
+          var canvas = document.createElement("canvas");
+          var width = plus.display.resolutionWidth;
+          var height = plus.display.resolutionHeight;
+          canvas.width = width; /*设置新的图片的宽度*/
+          canvas.height = height; /*设置新的图片的长度*/
+          var ctx = canvas.getContext("2d");
+          ctx.drawImage(img, 0, 0, width, height); /*绘图*/
+          return canvas.toDataURL("image/png", 0.8);
+        }
+
+        var getImages = function (event) {
+          tab = event.target.dataset.set;
+          var cmr = plus.camera.getCamera();
+          var res = cmr.supportedImageResolutions[0];
+          var fmt = cmr.supportedImageFormats[0];
+          cmr.captureImage(function (path) {
+            plus.io.resolveLocalFileSystemURL(path, function (entry) {
+              var localUrl = entry.toLocalURL();
+              var image = new Image();
+              image.src = localUrl;
+              image.onload = function () {
+                imgData = getBase64Image(image);
+                var imageHtml = '<img src="' + imgData + '" style="max-width: 100%;max-height: 100%"/>';
+                if (tab === 'tab1') {
+                  imgData1 = imgData;
+                  me.$('#order-upload-image-tab1').html(imageHtml);
+                } else {
+                  imgData2 = imgData;
+                  me.$('#order-upload-image-tab2').html(imageHtml);
+                }
+              }
+            }, function (err) {
+            }, {
+                index: 1
+              });
+          });
+        };
+
+        var galleryImages = function (id) {
+          plus.gallery.pick(function (path) {
+            var img = new Image();
+            img.src = path;
+            img.onload = function () {
+              var that = this;
+              //生成比例 
+              var w = that.width,
+                h = that.height,
+                scale = w / h;
+              w = 480 || w;              //480  你想压缩到多大，改这里
+              h = w / scale;
+              //生成canvas
+              var canvas = document.createElement('canvas');
+              var ctx = canvas.getContext('2d');
+              me.$(canvas).attr({ width: w, height: h });
+              ctx.drawImage(that, 0, 0, w, h);
+              var base64 = canvas.toDataURL('image/jpeg', 1 || 0.8);   //1最清晰，越低越模糊。有一点不清楚这里明明设置的是jpeg。弹出 base64 开头的一段 data：image/png;却是png。哎开心就好，开心就好
+              var imageHtml = '<img src="' + base64 + '" style="max-width: 100%;max-height: 100%"/>';
+              if (tab === 'tab1') {
+                imgData1 = base64;
+                me.$('#order-upload-image-tab1').empty();
+                me.$('#order-upload-image-tab1').html(imageHtml);
+              } else {
+                imgData2 = base64;
+                me.$('#order-upload-image-tab2').empty();
+                me.$('#order-upload-image-tab2').html(imageHtml);
+              }
+            }
+          });
+        };
+
+        var selectCamera = function (id) {
+          var a = [{
+            title: '拍照'
+          }, {
+            title: '从手机相册选择'
+          }];
+          plus.nativeUI.actionSheet({
+            title: '请选择',
+            cancel: '取消',
+            buttons: a
+          }, function (b) {
+            switch (b.index) {
+              case 0:
+                break;
+              case 1:
+                //拍照
+                getImages(id);
+                break;
+              case 2:
+                //打开相册
+                galleryImages(id);
+                break;
+              default:
+                break;
+            }
+          }, false);
+        }
+        me.$$('.order-upload-btn').on('click', selectCamera);
+
+        me.$('#order-upload-submit-id').on('click', function () {
+          // 提交
+          if (tab === 'tab1') {
+            var date = me.$('#tab1-date-id')[0].value;
+            var zhds = me.$('#tab1-zhds-id')[0].value;
+            if (!date) {
+              var toastTop = app.toast.create({
+                text: '请选择装货日期!',
+                position: 'center',
+                closeTimeout: 2000,
+              });
+              toastTop.open();
+              return;
+            }
+            if (!zhds) {
+              var toastTop = app.toast.create({
+                text: '请输入装货吨数!',
+                position: 'center',
+                closeTimeout: 2000,
+              });
+              toastTop.open();
+              return;
+            }
+            me.$app.preloader.show();
+            app.request.post(window.url + 'type=addzcbd', {
+              id: me.id,
+              zhrq: date,
+              zhds: zhds,
+              zhtp: imgData1
+            },
+              function (data) {
+                me.$app.preloader.hide();
+                console.error('上传装货磅单', JSON.parse(data));
+                var result = JSON.parse(data);
+                if (result.errcode !== '00000') {
+                  var toastTop = app.toast.create({
+                    text: result.result || '系统错误!',
+                    position: 'center',
+                    closeTimeout: 2000,
+                  });
+                  toastTop.open();
+                } else {
+                  var toastTop = app.toast.create({
+                    text: '上传成功!',
+                    position: 'center',
+                    closeTimeout: 2000,
+                  });
+                  toastTop.open();
+                  setTimeout(function () {
+                    $$(document).trigger('orderReady');
+                    $$(document).trigger('refreshOrderDetail');
+                    me.$router.back();
+                  }, 2000);
+                }
+              });
+          } else {
+            var date = me.$('#tab2-date-id')[0].value;
+            var xhds = me.$('#tab2-xhds-id')[0].value;
+            if (!date) {
+              var toastTop = app.toast.create({
+                text: '请选择卸货日期!',
+                position: 'center',
+                closeTimeout: 2000,
+              });
+              toastTop.open();
+              return;
+            }
+            if (!xhds) {
+              var toastTop = app.toast.create({
+                text: '请输入卸货吨数!',
+                position: 'center',
+                closeTimeout: 2000,
+              });
+              toastTop.open();
+              return;
+            }
+            me.$app.preloader.show();
+            app.request.post(window.url + 'type=addxcbd', {
+              id: me.id,
+              xhrq: date,
+              xhds: xhds,
+              xhtp: imgData2
+            },
+              function (data) {
+                me.$app.preloader.hide();
+                console.error('上传卸货磅单', JSON.parse(data));
+                var result = JSON.parse(data);
+                if (result.errcode !== '00000') {
+                  var toastTop = app.toast.create({
+                    text: result.result || '系统错误!',
+                    position: 'center',
+                    closeTimeout: 2000,
+                  });
+                  toastTop.open();
+                } else {
+                  me.$('#tab2-id').removeClass('disabled');
+                  var toastTop = app.toast.create({
+                    text: '上传成功!',
+                    position: 'center',
+                    closeTimeout: 2000,
+                  });
+                  toastTop.open();
+                  setTimeout(function () {
+                    $$(document).trigger('hallReady');
+                    $$(document).trigger('orderReady');
+                    $$(document).trigger('refreshOrderDetail');
+                    me.$router.back();
+                  }, 2000);
+                }
+              });
+          }
+        });
+
+        // 获取已上传的磅单
+        app.request.post(window.url + 'type=getbdnmodel', {
+          id: me.id
+        },
+          function (data) {
+            console.error('已上传磅单3', JSON.parse(data));
+            var result = JSON.parse(data);
+            if (!result.zhds) {
+              me.$('#tab2-id').addClass('disabled');
+            } else {
+              me.$('#tab2-id').removeClass('disabled');
+            }
+            me.$('#tab1-dingdanhao-id')[0].value = result.onumber;
+            me.$('#tab1-date-id')[0].value = result.zhrq;
+            me.$('#tab1-zhd-id')[0].value = result.zhd;
+            me.$('#tab1-plate-id')[0].value = result.plate;
+            me.$('#tab1-proname-id')[0].value = result.proname;
+            me.$('#tab1-price-id')[0].value = result.price;
+            me.$('#tab1-zhds-id')[0].value = result.zhds;
+            result.zhtp ? me.$('#order-upload-image-tab1').html('<img src="' + window.imageUrl + result.zhtp + '" style="max-width: 100%;max-height: 100%"/>') : '';
+
+            me.$('#tab2-dingdanhao-id')[0].value = result.onumber;
+            me.$('#tab2-date-id')[0].value = result.xhrq;
+            me.$('#tab2-xhd-id')[0].value = result.xhd;
+            me.$('#tab2-plate-id')[0].value = result.plate;
+            me.$('#tab2-proname-id')[0].value = result.proname;
+            me.$('#tab2-price-id')[0].value = result.price;
+            me.$('#tab2-xhds-id')[0].value = result.xhds;
+            result.xhtp ? me.$('#order-upload-image-tab2').html('<img src="' + window.imageUrl + result.xhtp + '" style="max-width: 100%;max-height: 100%"/>') : '';
+          });
+        me.$$('.toolbar').addClass('hidden');
+      }
+    },
+    beforeDestroy: function () {
+      this.$$('.toolbar').removeClass('hidden');
+    },
+  };
+</script>

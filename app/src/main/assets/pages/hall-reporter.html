@@ -1,0 +1,237 @@
+<template>
+  <div class="page" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back color-blue"></i>
+          </a>
+        </div>
+        <div class="title">报号</div>
+        <div class="right" style="width: 66px"></div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="list inline-labels no-hairlines-md">
+        <ul>
+          <li>
+            <a class="item-link smart-select smart-select-init" data-open-in="popup" data-searchbar="true" data-searchbar-placeholder="按照车牌号搜索">
+              <select id="all-cars-id" name="car">
+              </select>
+              <div class="item-content">
+                <div class="item-inner" id="default-select-car">
+                  <div id="car-plate-id" class="item-title item-label" style="padding-right: 66px">选择车辆</div>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">司机姓名</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="请输入" id="driver-name-id">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">司机电话</div>
+              <div class="item-input-wrap">
+                <input type="tel" placeholder="请输入" id="driver-tel-id">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">身份证号</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="请输入" id="card-id">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">运费单价</div>
+              <div class="item-input-wrap">
+                <input readonly="readonly" type="number" placeholder="请输入" value="{{price}}" id="price-id">
+              </div>
+            </div>
+          </li>
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">标准吨数</div>
+              <div class="item-input-wrap">
+                <input type="number" placeholder="请输入" value="{{weight}}" id="weight-id">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+          <!-- <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">客户名称</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="请输入" id="customer-name-id">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li> -->
+          <li class="item-content item-input">
+            <div class="item-inner">
+              <div class="item-title item-label">结款方式</div>
+              <div class="item-input-wrap">
+                <input type="text" placeholder="请选择" readonly="readonly" id="confidence_type_id">
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="report-submit">
+        <button class="col button button-fill report-submit-btn">提交</button>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        var me = this;
+        this.$$('.toolbar').addClass('hidden');
+        console.error('订单数据', this);
+        // 初始化车辆
+        me.$app.request.post(window.url + 'type=getclbygid',
+          {
+            gid: window.userid,
+            plate: '',
+          },
+          function (data) {
+            console.error('认证车辆', data);
+            var carsList = JSON.parse(data);
+            if (carsList.info && carsList.info.length > 0) {
+              const htmlText = '{{#each list}}<option class="car-option" value="{{id}}" data-idcard="{{idcard}}" data-mobile="{{mobile}}" data-name="{{name}}">{{plate}}</option>{{/each}}';
+              var compiledTemplate = Template7.compile(htmlText);
+              var html = compiledTemplate({
+                list: carsList.info
+              });
+              me.$$('#all-cars-id').html(html);
+              me.$('#all-cars-id').on('change', function (event) {
+                var selectedOption = event.target.selectedOptions[0].dataset;
+                console.error('车辆', selectedOption);
+                me.$$('#driver-name-id')[0].value = selectedOption.name;
+                me.$$('#card-id')[0].value = selectedOption.idcard;
+                me.$$('#driver-tel-id')[0].value = selectedOption.mobile;
+              });
+              me.$('.smart-select').on('click', function () {
+                me.$('.item-radio').on('click', function (e) {
+                  console.error('选择车辆', e);
+                  setTimeout(function () {
+                    app.popup.close('.smart-select-popup');
+                  }, 100);
+                });
+              });
+              // 初始化默认选择车辆
+              // me.$('#car-plate-id').html(carsList.info[0].plate);
+              me.$('#default-select-car .item-after').html(carsList.info[0].plate);
+              me.$('#all-cars-id').attr('value', '0');
+              me.$$('#driver-name-id')[0].value = carsList.info[0].name;
+              me.$$('#card-id')[0].value = carsList.info[0].idcard;
+              me.$$('#driver-tel-id')[0].value = carsList.info[0].mobile;
+            } else {
+              var toastTop = app.toast.create({
+                text: '没有认证车辆!',
+                position: 'center',
+                closeTimeout: 2000,
+              });
+              toastTop.open();
+            }
+          });
+        // 初始化结款方式
+        var pickerDevice = app.picker.create({
+          inputEl: '#confidence_type_id',
+          toolbarCloseText: '确定',
+          cols: [
+            {
+              textAlign: 'center',
+              values: ['线上', '线下']
+            }
+          ]
+        });
+
+        me.$$('.report-submit-btn').on('click', function () {
+          if (!me.$$('#card-id')[0].value) {
+            var toastTop = app.toast.create({
+              text: '请输入身份证号!',
+              position: 'center',
+              closeTimeout: 2000,
+            });
+            toastTop.open();
+            return;
+          }
+          if (!me.$$('#driver-name-id')[0].value || !me.$$('#driver-tel-id')[0].value) {
+            var toastTop = app.toast.create({
+              text: '请选择车辆!',
+              position: 'center',
+              closeTimeout: 2000,
+            });
+            toastTop.open();
+            return;
+          }
+          if (!me.$$('#confidence_type_id')[0].value) {
+            var toastTop = app.toast.create({
+              text: '请选择结款方式!',
+              position: 'center',
+              closeTimeout: 2000,
+            });
+            toastTop.open();
+            return;
+          }
+          me.$app.preloader.show();
+          me.$app.request.post(window.url + 'type=addbh',
+            {
+              oid: me.id,
+              carid: me.$('#all-cars-id')[0].value, // 车辆id
+              sjxm: me.$$('#driver-name-id')[0].value,
+              sfz: me.$$('#card-id')[0].value,
+              sjdh: me.$$('#driver-tel-id')[0].value,
+              price: me.$$('#price-id')[0].value,
+              weight: me.$$('#weight-id')[0].value,
+              yjtype: me.$$('#confidence_type_id')[0].value,
+              // gname: me.$$('#customer-name-id').val,
+              userid: window.userid,
+              gid: window.userid,
+            },
+            function (data) {
+              console.error('报号结果', data)
+              me.$app.preloader.hide();
+              const result = JSON.parse(data);
+              if (result.errcode === '000000') {
+                var toastTop = app.toast.create({
+                  text: '报号成功!',
+                  position: 'center',
+                  closeTimeout: 2000,
+                });
+                toastTop.open();
+                setTimeout(function () {
+                  me.$router.back();
+                }, 2000);
+              } else {
+                var toastTop = app.toast.create({
+                  text: result.result,
+                  position: 'center',
+                  closeTimeout: 2000,
+                });
+                toastTop.open();
+              }
+            });
+        });
+      }
+    },
+    beforeDestroy: function () {
+      this.$$('.toolbar').removeClass('hidden');
+    },
+  }
+</script>

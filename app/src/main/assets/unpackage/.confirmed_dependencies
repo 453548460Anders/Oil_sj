@@ -1,0 +1,28 @@
+{
+  "index.html": {
+    "resources": [
+      "js/app.js",
+      "js/routes.js",
+      "css/app.css",
+      "framework7/js/framework7.min.js",
+      "framework7/css/framework7.min.css",
+      "css/iconfont.css",
+      "fonts/iconfont.ttf",
+      "plugins/regionsObject2.js",
+      "images/login_header.png",
+      "images/report.png",
+      "images/logo.png",
+      "pages/service.html",
+      "images/hall_header.png",
+      "pages/me.html",
+      "images/s2.png",
+      "images/user.png",
+      "images/s1.png",
+      "images/s3.png",
+      "images/default_order.png",
+      "pages/hall.html",
+      "pages/order.html"
+    ],
+    "refer": []
+  }
+}

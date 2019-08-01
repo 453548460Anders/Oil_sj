@@ -1,0 +1,216 @@
+<template>
+  <div class="page search-location" data-name="catalog">
+    <div class="navbar">
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back color-blue"></i>
+          </a>
+        </div>
+        <div class="title">公里数查询</div>
+        <div class="right" style="width: 66px"></div>
+      </div>
+    </div>
+    <div class="page-content" style="padding-top: 56px !important;padding-bottom: 0 !important;">
+      <div class="list links-list">
+        <ul>
+          <li style="padding: 5px 10px;">
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">起始地</div>
+                <div class="item-after" style="margin-left: 10px;width: calc(100% - 70px);">
+                  <input type="text" placeholder="起始地" readonly id="locationStart" name="locationStart" style="color: #7F8081;font-size: 14px;padding-left: 10px;">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li style="padding: 5px 10px;">
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">目的地</div>
+                <div class="item-after" style="margin-left: 10px;width: calc(100% - 70px);">
+                  <input type="text" placeholder="目的地" readonly id="locationEnd" name="locationEnd" style="color: #7F8081;font-size: 14px;padding-left: 10px;"> </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="report-submit">
+        <button class="col button button-fill report-submit-btn" id="query-km-btn-id">查询</button>
+      </div>
+      <div class="list links-list">
+        <ul>
+          <li style="padding: 5px 10px;">
+            <div style="display: flex;justify-content: space-between;align-items: center;">
+              <i class="iconfont icon-shijian"></i>
+              <span id="distanceId" style="display: inline-block;width: calc(100% - 32px);color: #646566;">待计算</span>
+            </div>
+          </li>
+          <li style="padding: 5px 10px;">
+            <div style="display: flex;justify-content: space-between;align-items: center;">
+              <i class="iconfont icon-caidan"></i>
+              <input type="text" placeholder="请选择" readonly="readonly" id="confidence_type_id" style="width: calc(100% - 32px);color: #646566">
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id='container' class="map-query-km">
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  return {
+    on: {
+      pageMounted: function (e, page) {
+        console.log('违章查询页', this);
+        var me = this;
+        mui.back = function () {
+          me.$router.back();
+          setTimeout(function () {
+            $$(document).trigger('meReady');
+            $$(document).trigger('serviceReady');
+
+            $$('#service-user-name')[0] ? $$('#service-user-name')[0].innerHTML = window.name : '';
+            $$('#service-user-telphone')[0] ? $$('#service-user-telphone')[0].innerHTML = window.telphone : '';
+
+            $$('#me-chepaihao-id')[0] ? $$('#me-chepaihao-id')[0].innerHTML = window.plate : '';
+            $$('#me-guahao-id')[0] ? $$('#me-guahao-id')[0].innerHTML = window.guahao : '';
+            $$('#me-name-id')[0] ? $$('#me-name-id')[0].innerHTML = window.name : '';
+            $$('#me-idcard-id')[0] ? $$('#me-idcard-id')[0].innerHTML = window.idcard : '';
+            $$('#me-telphone-id')[0] ? $$('#me-telphone-id')[0].innerHTML = window.telphone : '';
+            $$('#me-weight-id')[0] ? $$('#me-weight-id')[0].innerHTML = window.weight : '';
+            $$('#me-chedui-id')[0] ? $$('#me-chedui-id')[0].innerHTML = window.sscd : '';
+          }, 500);
+        }
+        var routePolicy = [AMap.DrivingPolicy.LEAST_TIME, AMap.DrivingPolicy.LEAST_DISTANCE, AMap.DrivingPolicy.LEAST_FEE];
+        var showToast = function (msg) {
+          var toastTop = app.toast.create({
+            text: msg,
+            position: 'center',
+            closeTimeout: 2000,
+          });
+          setTimeout(function () {
+            me.$router.back();
+          }, 2000);
+          toastTop.open();
+        }
+        String.prototype.replaceAll = function (s1, s2) {
+          return this.replace(new RegExp(s1, "gm"), s2);
+        }
+        // 隐藏toolbar
+        me.$$('.toolbar').addClass('hidden');
+        // append js
+        var cityPickerStart = document.createElement("script");
+        cityPickerStart.src = "plugins/cityPickerStart.js";
+        me.$$("body").append(cityPickerStart);
+
+        var cityPickerEnd = document.createElement("script");
+        cityPickerEnd.src = "plugins/cityPickerEnd.js";
+        me.$$("body").append(cityPickerEnd);
+
+        this.$app.preloader.show('定位中...');
+        // 定位问题
+        plus.geolocation.getCurrentPosition(function (position) {
+          console.error('查询公里数-获取地理位置成功', position);
+          map = new AMap.Map("container", {
+            resizeEnable: true,
+            center: [position.coords.longitude, position.coords.latitude]
+          });
+          driving = new AMap.Driving({
+            map: map,
+            panel: ""
+          });
+          me.$app.preloader.hide();
+        }, function () {
+          me.$app.preloader.hide();
+          var toastTop = app.toast.create({
+            text: '定位失败，请稍后重试!',
+            position: 'center',
+            closeTimeout: 2000,
+          });
+          setTimeout(function () {
+            me.$router.back();
+          }, 2000);
+          toastTop.open();
+        }, { timeout: 10000 });
+
+        // 算路
+        var navi = function (type) {
+          var start = me.$$('#locationStart')[0].value;
+          var end = me.$$('#locationEnd')[0].value;
+          console.error('start', start);
+          console.error('end', end);
+          if (!start && !end) {
+            showToast('请选择起始地出发地!');
+            return;
+          }
+          if (!start) {
+            showToast('请选择起始地!');
+            return;
+          }
+          if (!end) {
+            showToast('请选择目的地!');
+            return;
+          }
+          me.$app.preloader.show('定位中...');
+          // 默认最短距离
+          driving.setPolicy(routePolicy[type]);
+          // 根据起终点名称规划驾车导航路线
+          const startCity = start.split(' ')[0];
+          const endCity = start.split(' ')[0];
+          const startPosition = start.replaceAll(' ', '');
+          const endPosition = end.replaceAll(' ', '');
+          driving.search([{
+            keyword: startPosition,
+            city: startCity
+          },
+          {
+            keyword: endPosition,
+            city: endCity
+          }
+          ], function (status, result) {
+            if (status === 'complete') {
+              me.$app.preloader.hide();
+              me.$$('#distanceId')[0].innerHTML = '预计里程' + result.routes[0].distance / 1000 + '公里';
+            }
+          });
+        }
+
+        var pickerDevice = app.picker.create({
+          inputEl: '#confidence_type_id',
+          toolbarCloseText: '确定',
+          cols: [
+            {
+              textAlign: 'center',
+              values: ['最少时间', '最短距离', '避开高速']
+            }
+          ]
+        });
+
+        me.$('#query-km-btn-id').on('click', function () {
+          const typeTxt = me.$('#confidence_type_id')[0].value;
+          var type;
+          switch (typeTxt) {
+            case '最少时间':
+              type = 0;
+              break;
+            case '最短距离':
+              type = 1;
+              break;
+            case '避开高速':
+              type = 2;
+              break;
+            default:
+              type = 0;
+              break;
+          }
+          navi(type);
+        });
+      }
+    },
+    beforeDestroy: function () {
+      this.$$('.toolbar').removeClass('hidden');
+    },
+  }
+</script>
