@@ -5,7 +5,7 @@ android {
 
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.yishi.dongbeizhongyouSiji"
+        applicationId "com.yishi.dongbeizhongyou_siji"
         minSdkVersion 14
         targetSdkVersion 27
         versionCode 1
@@ -20,7 +20,7 @@ android {
         }
 
         manifestPlaceholders = [
-                JPUSH_PKGNAME : "com.yishi.dongbeizhongyouSiji",
+                JPUSH_PKGNAME : "com.yishi.dongbeizhongyou_siji",
                 JPUSH_APPKEY : "0d790aeeeebc7169a3dc5c18", //JPush 上注册的包名对应的 Appkey.
                 JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
         ]

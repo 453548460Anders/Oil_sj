@@ -3,9 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IDCardLib/IDCardLib.iml" filepath="$PROJECT_DIR$/IDCardLib/IDCardLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Oil_sj.iml" filepath="$PROJECT_DIR$/Oil_sj.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/livenesslib/livenesslib.iml" filepath="$PROJECT_DIR$/livenesslib/livenesslib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sssss.iml" filepath="$PROJECT_DIR$/sssss.iml" />
     </modules>
   </component>
 </project>

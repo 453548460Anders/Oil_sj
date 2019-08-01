@@ -63,7 +63,9 @@
                 // compile it with Template7
                 var compiledTemplate = Template7.compile(htmlText);
                 const result = JSON.parse(data);
-                console.error('当前订单', result);
+                // console.error('当前订单, 当前订单, 当前订单, 当前订单, 当前订单, 当前订单', result);
+                // console.error('当前订单aaaaabbbbbb'+result.toString());
+                // console.error('当前订单aaaaa'+data);
                 total = result.total;
 
                 if (result && result.data && result.data.length > 0) {
@@ -72,6 +74,7 @@
                   }
 
                   );
+                  console.error('htmlhtmlhtmlhtmlhtmlhtmlhtml' + html);
                   me.$('#scroller').html(html);
 
                   // 无限刷新

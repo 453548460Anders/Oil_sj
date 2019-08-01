@@ -522,7 +522,7 @@
 }
 
 .hall-item-li {
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 

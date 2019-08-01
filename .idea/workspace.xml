@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="jpush" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="htmlhtmlhtmlhtmlhtmlhtmlhtml" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
@@ -41,220 +41,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0ba2620f-65a0-45cc-a7fa-eb3f0f555aa0" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_CCC__sssss_IDCardLib_libs_idcardquality_proguard_1_2_2_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_CCC__sssss_app_libs_BaiduLBS_Android_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_CCC__sssss_app_libs_android_async_http_1_4_6_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_CCC__sssss_livenesslib_libs_licensemanager_v1_1_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_CCC__sssss_livenesslib_libs_livenessdetection_proguard_2_4_5_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_rocky_Desktop_androidwork_sssss_IDCardLib_libs_idcardquality_proguard_1_2_2_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_rocky_Desktop_androidwork_sssss_app_libs_BaiduLBS_Android_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_rocky_Desktop_androidwork_sssss_app_libs_android_async_http_1_4_6_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_rocky_Desktop_androidwork_sssss_livenesslib_libs_licensemanager_v1_1_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_rocky_Desktop_androidwork_sssss_livenesslib_libs_livenessdetection_proguard_2_4_5_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__cn_jiguang_sdk_jcore_2_1_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__cn_jiguang_sdk_jpush_3_3_4_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_instrumentation_1_0_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_2_2_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_2_2_2_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_exposed_instrumentation_api_publish_0_5_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_0_5_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_0_5_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_hotchemi_permissionsdispatcher_3_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle____local_aars____Users_zhangzhinan_Documents_workspace_BY_0615_driver_android_IDCardLib_libs_idcardquality_proguard_1_2_2_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle____local_aars____Users_zhangzhinan_Documents_workspace_BY_0615_driver_android_app_libs_BaiduLBS_Android_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle____local_aars____Users_zhangzhinan_Documents_workspace_BY_0615_driver_android_app_libs_android_async_http_1_4_6_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle____local_aars____Users_zhangzhinan_Documents_workspace_BY_0615_driver_android_livenesslib_libs_licensemanager_v1_1_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle____local_aars____Users_zhangzhinan_Documents_workspace_BY_0615_driver_android_livenesslib_libs_livenessdetection_proguard_2_4_5_jar_unspecified_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_core_common_1_1_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_0_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__javax_annotation_javax_annotation_api_1_2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__org_apache_http_legacy_android_27.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sssss.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Oil_sj.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_zhangzhinan_Documents_BY_driver_IDCardLib_libs_idcardquality_proguard_1_2_2_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_zhangzhinan_Documents_BY_driver_app_libs_BaiduLBS_Android_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_zhangzhinan_Documents_BY_driver_app_libs_android_async_http_1_4_6_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_zhangzhinan_Documents_BY_driver_livenesslib_libs_licensemanager_v1_1_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_zhangzhinan_Documents_BY_driver_livenesslib_libs_livenessdetection_proguard_2_4_5_jar_unspecified_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_2_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_2_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_2_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_2_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_exposed_instrumentation_api_publish_0_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_test_exposed_instrumentation_api_publish_0_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_0_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_test_rules_0_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_0_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_android_support_test_runner_0_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_hotchemi_permissionsdispatcher_3_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/libraries/Gradle__com_github_hotchemi_permissionsdispatcher_3_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_CCC__sssss_IDCardLib_libs_idcardquality_proguard_1_2_2_jar_unspecified_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_Oil_sj_IDCardLib_libs_idcardquality_proguard_1_2_2_jar_unspecified_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_CCC__sssss_app_libs_BaiduLBS_Android_jar_unspecified_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_Oil_sj_app_libs_BaiduLBS_Android_jar_unspecified_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_CCC__sssss_app_libs_android_async_http_1_4_6_jar_unspecified_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_Oil_sj_app_libs_android_async_http_1_4_6_jar_unspecified_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_CCC__sssss_livenesslib_libs_licensemanager_v1_1_jar_unspecified_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_Oil_sj_livenesslib_libs_licensemanager_v1_1_jar_unspecified_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_CCC__sssss_livenesslib_libs_livenessdetection_proguard_2_4_5_jar_unspecified_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_anderson_Desktop_Oil_sj_livenesslib_libs_livenessdetection_proguard_2_4_5_jar_unspecified_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_rocky_Desktop_androidwork_sssss_IDCardLib_libs_idcardquality_proguard_1_2_2_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_rocky_Desktop_androidwork_sssss_app_libs_BaiduLBS_Android_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_rocky_Desktop_androidwork_sssss_app_libs_android_async_http_1_4_6_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_rocky_Desktop_androidwork_sssss_livenesslib_libs_licensemanager_v1_1_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars____Users_rocky_Desktop_androidwork_sssss_livenesslib_libs_livenessdetection_proguard_2_4_5_jar_unspecified_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__cn_jiguang_sdk_jcore_2_1_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__cn_jiguang_sdk_jcore_2_1_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__cn_jiguang_sdk_jpush_3_3_4_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__cn_jiguang_sdk_jpush_3_3_4_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_27_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_27_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_1_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_instrumentation_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_multidex_instrumentation_1_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_27_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_27_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_27_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_27_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_27_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_2_2_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_2_2_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_2_2_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_2_2_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_exposed_instrumentation_api_publish_0_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_exposed_instrumentation_api_publish_0_5_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_0_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_rules_0_5_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_0_5_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_0_5_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_hotchemi_permissionsdispatcher_3_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_hotchemi_permissionsdispatcher_3_1_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IDCardLib/IDCardLib.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IDCardLib/IDCardLib.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IDCardLib/src/main/res/drawable-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/IDCardLib/src/main/res/drawable-xxhdpi/ic_launcher.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/megvii/livenessproject/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/megvii/dongbeizhongyou_siji/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/megvii/dongbeizhongyou_siji/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/megvii/dongbeizhongyou_siji/ExampleInstrumentedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/css/iconfont.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/css/iconfont.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/css/mescroll.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/fonts/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/fonts/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/framework7/css/framework7.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/framework7/css/framework7.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/framework7/js/framework7.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/framework7/js/framework7.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/images/dirver1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/images/dirver2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/images/dirver3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/images/dirver4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/images/header.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/js/mescroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/js/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/js/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/forgot-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/hall-filter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/hall-reporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/hall-reporter.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/hall.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/hall.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/login_register_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/login_register_4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/login_register_5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/login_register_6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/login_register_7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-add-address.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-car-auth-detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-car-auth-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-car-auth.3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-car-auth.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-carinfo-update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-collections.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-messages.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-setting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-shipping-address.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-suggest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-update-address.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-user-bank-update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-user-bank.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-user-info-update-telphone.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-user-info-updpwd-by-old.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-user-info-updpwd-by-phone.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-user-info.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-userinfo-update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me-yhq.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/me.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/me.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/order-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/order-detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/order-entity-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/order-entity-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/order-entity-new.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/order-entity-new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/order-entity-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/order-entity-view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/order-qianfeng-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/order-upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/order-upload.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/page-loader-component.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/page-loader-component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/page-loader-template7.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/page-loader-template7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/request-and-load.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/request-and-load.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/service_device.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/service_device.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/service_gift.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/service_gift.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/service_query_km.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/service_query_km.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/service_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/service_record.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/service_view_map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/service_violate.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/service_violate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/pages/user-protocal.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/pages/user-protocal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/LoadingActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/ResultActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/bdmap/BdmapManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/bdmap/LocationCallback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/help/ReqCheck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/help/ocr/idcard/model/Birthday.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/help/ocr/idcard/model/Head_rect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/help/ocr/idcard/model/Lb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/help/ocr/idcard/model/Legality.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/help/ocr/idcard/model/Lt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/help/ocr/idcard/model/OrcIdCard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/help/ocr/idcard/model/Rb.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/help/ocr/idcard/model/Rt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/help/ocr/idcardback/model/OrcIdCardBack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/statusbar/StatusBarCompat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/statusbar/StatusBarCompatKitKat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/statusbar/StatusBarCompatLollipop.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/tools/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/tools/MyUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/tools/RequestCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/tools/ThreadUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/userinfo/IDcardInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/userinfo/LiveInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/view/CircleProgressBar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/megvii/livenessproject/view/RotaterView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/idcardproject/IDLoadingActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/idcardproject/IDLoadingActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/idcardproject/IDResultActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/idcardproject/IDResultActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/mywebpage/LaunchActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mywebpage/LaunchActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/mywebpage/PicActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mywebpage/PicActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/mywebpage/WebActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/mywebpage/WebActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/loading_background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/loading_background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/launch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_result.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/megvii/livenessproject/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/megvii/dongbeizhongyou_siji/ExampleUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/livenesslib/livenesslib.iml" beforeDir="false" afterPath="$PROJECT_DIR$/livenesslib/livenesslib.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/livenesslib/src/main/res/drawable-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/livenesslib/src/main/res/drawable-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/livenesslib/src/main/res/drawable-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/livenesslib/src/main/res/drawable-xxhdpi/ic_launcher.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sssss.iml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -274,68 +120,13 @@
       </state>
     </system>
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="750467562">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="2" />
-          <entry key="gradle" value="6" />
-          <entry key="java" value="58" />
-          <entry key="js" value="2" />
-          <entry key="properties" value="5" />
-          <entry key="xml" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="Groovy" value="6" />
-          <entry key="JAVA" value="58" />
-          <entry key="JavaScript" value="2" />
-          <entry key="Properties" value="5" />
-          <entry key="XML" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="10" />
-          <entry key="gradle" value="5" />
-          <entry key="java" value="73" />
-          <entry key="xml" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Groovy" value="5" />
-          <entry key="JAVA" value="73" />
-          <entry key="PLAIN_TEXT" value="10" />
-          <entry key="XML" value="4" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gradle.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="198">
               <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -343,77 +134,60 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/yishi/dongbeizhongyou_siji/BuildConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <state relative-caret-position="198">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/update/DownloadCallback.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/bdmap/BdmapManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider editor-type-id="android-manifest" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="35" selection-start-line="7" selection-end-line="8" />
-              <folding>
-                <element signature="e#1443#1461#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/local.properties">
+        <entry file="file://$PROJECT_DIR$/build.sh">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+        <entry file="file://$PROJECT_DIR$/driver.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/driver_android.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="1335">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
             </state>
           </provider>
+          <provider editor-type-id="android-manifest" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_result.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-31" />
+          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+            <state relative-caret-position="314">
+              <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -429,8 +203,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ACCESS_WIFI_STATE</find>
-      <find>com.megvii.dongbeizhongyouchezhu</find>
       <find>getCity</find>
       <find>loadUrl</find>
       <find>register</find>
@@ -459,6 +231,8 @@
       <find>com.megvi</find>
       <find>com.megvii.</find>
       <find>com.megvii.livenessproject</find>
+      <find>dongbeizhongyouS</find>
+      <find>youSi</find>
     </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
@@ -522,129 +296,86 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/help/ocr/idcard/model/OrcIdCard.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/help/ReqCheck.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_sijs/App.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/App.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/yishi/dongbeizhongyou_siji/BuildConfig.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/com/megvii/dongbeizhongyou_siji/ExampleInstrumentedTest.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/App.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="683" />
-    <option name="height" value="728" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1871" />
+    <option name="y" value="23" />
+    <option name="width" value="1871" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages AndroidView="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="sssss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sssss" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Oil_sj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Oil_sj" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="sssss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sssss" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Oil_sj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Oil_sj" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
-              <item name="sssss" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sssss" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="Oil_sj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Oil_sj" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
             <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="Oil_sj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Oil_sj" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
+              <item name="Oil_sj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Oil_sj" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="Oil_sj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Oil_sj" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dongbeizhongyou_siji" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dongbeizhongyou_siji" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="bdmap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="update" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="generatedJava" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="generatedJava" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="dongbeizhongyou_siji" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="assets" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="IDCardLib" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="livenesslib" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="livenesslib" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="livenesslib" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="livenesslib" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sssss" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+              <item name="Oil_sj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Oil_sj" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -653,13 +384,13 @@
     <property name="ExportApk.SignV1" value="true" />
     <property name="ExportApk.SignV2" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../../../../../../../../../../Android/sdk" />
-    <property name="device.picker.selection" value="2b8a6846" />
+    <property name="device.picker.selection" value="f21e61e5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Suggestions" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.34042552" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
-    <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.1.1" />
+    <property name="show.do.not.ask.upgrade.gradle.plugin" value="3.3.2" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="sync.plugin.last.upgrade.timestamp" value="1564453161565" />
   </component>
@@ -706,6 +437,7 @@
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
@@ -770,7 +502,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="TestNG">
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -802,10 +534,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
+    <frame x="-1871" y="23" width="1871" height="1057" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26666668" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20338982" />
       <window_info id="Structure" order="1" weight="0.24958949" />
       <window_info id="Captures" order="2" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -817,15 +548,15 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49642858" weight="0.32928064" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.55440414" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49940476" visible="true" weight="0.4539007" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49940476" weight="0.20103627" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32953367" />
-      <window_info anchor="bottom" x="363" y="327" width="1349" height="397" id="Logcat" order="7" sideWeight="0.75535715" type="FLOATING" weight="0.47923" />
+      <window_info anchor="bottom" x="-1589" y="227" width="1588" height="759" id="Logcat" order="7" sideWeight="0.75535715" type="WINDOWED" visible="true" weight="0.47923" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" x="635" y="288" width="410" height="473" id="Event Log" order="9" sideWeight="0.24464285" side_tool="true" type="WINDOWED" weight="0.47923" />
+      <window_info anchor="bottom" x="-716" y="456" width="410" height="473" id="Event Log" order="9" sideWeight="0.24464285" side_tool="true" type="WINDOWED" weight="0.47923" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Build" order="11" sideWeight="0.85892856" weight="0.3870314" />
+      <window_info anchor="bottom" id="Build" order="11" sideWeight="0.85892856" visible="true" weight="0.3865285" />
       <window_info anchor="bottom" id="Android Profiler" order="12" />
       <window_info anchor="bottom" id="Flutter Performance" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -838,11 +569,8 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Flutter Inspector" order="8" />
       <window_info anchor="right" id="Flutter Outline" order="9" />
-      <window_info anchor="right" id="Preview" order="10" weight="0.32950193" />
+      <window_info anchor="right" id="Preview" order="10" visible="true" weight="0.32914162" />
     </layout>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -851,47 +579,12 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/App.java</url>
           <line>20</line>
           <properties />
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/megvii/livenessproject/BuildConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="7" column="77" selection-start-line="7" selection-start-column="77" selection-end-line="7" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/bdmap/LocationCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/help/ocr/idcard/model/Birthday.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/help/ocr/idcard/model/Head_rect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/help/ocr/idcard/model/Lb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/help/ocr/idcard/model/Legality.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -1109,16 +802,6 @@
     <entry file="file://$PROJECT_DIR$/livenesslib/build.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mywebpage/WebActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="81" column="55" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-27/android.jar!/android/os/Looper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -1148,36 +831,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/megvii/dongbeizhongyou_siji/ExampleInstrumentedTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IDCardLib/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-309">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/livenesslib/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="35" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="35" />
         </state>
       </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradle.properties">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/update/DownloadCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="90">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/bdmap/BdmapManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1186,69 +869,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="108">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/yishi/dongbeizhongyou_siji/BuildConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/update/DownloadCallback.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/bdmap/BdmapManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="51" column="30" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="35" selection-start-line="7" selection-end-line="8" />
-          <folding>
-            <element signature="e#1443#1461#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/yishi/dongbeizhongyou_siji/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="234">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mywebpage/WebActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="117" column="71" selection-start-line="117" selection-start-column="71" selection-end-line="117" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/megvii/dongbeizhongyou_siji/ExampleInstrumentedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/driver.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/yishi/dongbeizhongyou_siji/BuildConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/driver_android.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_result.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31" />
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
 </project>

@@ -12,8 +12,6 @@ import cn.jpush.android.api.JPushInterface;
 
 public class App extends Application {
 
-
-
     @Override
     public void onCreate() {
         super.onCreate();
